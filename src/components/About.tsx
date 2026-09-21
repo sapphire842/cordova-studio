@@ -28,7 +28,7 @@ export default function About() {
           </div>
 
           <div className="lg:pt-8">
-            <p className="eyebrow text-accent">The Studio</p>
+            <p className="eyebrow text-accent">Omar Córdova García · Founder &amp; Designer</p>
             <h2 className="mt-6 max-w-2xl font-serif text-[clamp(2.7rem,5vw,4.8rem)] leading-[1.02] tracking-[-0.035em] text-charcoal">
               Every room begins with
               <span className="italic text-studio-green/75"> how it will be lived in.</span>

@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="section-shell relative z-10 grid min-h-[100svh] items-end gap-12 pb-28 pt-40 md:grid-cols-[minmax(0,1fr)_18rem] md:pb-24 md:pt-44">
         <div ref={ref} className="fade-in max-w-[60rem] self-center md:pt-14">
           <p className="eyebrow text-accent-light">
-            California interiors, considered slowly
+            For homes with a life of their own
           </p>
           <h1 className="mt-8 font-serif text-[clamp(3.75rem,7vw,7rem)] font-normal leading-[0.98] tracking-[-0.018em] text-warm-white">
             Rooms with

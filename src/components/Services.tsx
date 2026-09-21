@@ -64,10 +64,10 @@ export default function Services() {
       <div className="section-shell">
         <div ref={ref} className="fade-in grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="eyebrow text-accent-light">Our Services</p>
+            <p className="eyebrow text-accent-light">Design support, without a prescribed path</p>
             <h2 className="mt-7 font-serif text-[clamp(3rem,5vw,5.2rem)] leading-[0.98] tracking-[-0.04em] text-warm-white">
-              Meet the project
-              <span className="block italic text-accent-light">where it is.</span>
+              A considered role,
+              <span className="block italic text-accent-light">at any scale.</span>
             </h2>
             <p className="mt-7 max-w-md text-base font-light leading-7 text-warm-white/62">
               Choose a focused consultation, an entire furnishing plan, or the

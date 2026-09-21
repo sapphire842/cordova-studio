@@ -180,10 +180,10 @@ export default function Contact() {
       <div className="section-shell">
         <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <div ref={ref} className="fade-in">
-            <p className="eyebrow text-accent">Get in Touch</p>
+            <p className="eyebrow text-accent">Tell us what home could become</p>
             <h2 className="mt-7 font-serif text-[clamp(3rem,5vw,5.2rem)] leading-[0.98] tracking-[-0.04em] text-charcoal">
-              Let&apos;s shape what comes
-              <span className="block italic text-studio-green/72">next.</span>
+              Bring the next chapter
+              <span className="block italic text-studio-green/72">into view.</span>
             </h2>
             <p className="mt-7 max-w-md text-base font-light leading-7 text-charcoal/68">
               Whether you&apos;re reimagining a single room or designing from
