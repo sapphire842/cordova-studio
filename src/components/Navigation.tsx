@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { withBasePath } from "@/lib/site";
 
 const navLinks = [
@@ -13,8 +14,11 @@ const navLinks = [
 ];
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isHome = pathname === "/" || pathname === withBasePath("/");
+  const isSolid = !isHome || scrolled || menuOpen;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32);
@@ -31,34 +35,36 @@ export default function Navigation() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b transition-all duration-500 ${
-        scrolled
-          ? "border-charcoal/10 bg-warm-white/92 shadow-[0_10px_40px_rgba(16,40,36,0.07)] backdrop-blur-xl"
-          : "border-charcoal/8 bg-warm-white"
-      }`}
-    >
-      <nav className="section-shell flex min-h-[76px] items-center justify-between">
+    <>
+      {!isHome && <div aria-hidden="true" className="h-[100px]" />}
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-500 ${
+          isSolid
+            ? "border-charcoal/10 bg-warm-white shadow-[0_10px_40px_rgba(16,40,36,0.07)]"
+            : "border-warm-white/18 bg-transparent"
+        }`}
+      >
+      <nav className="section-shell flex min-h-[100px] items-center justify-between">
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="The Córdova Studio home"
         >
-          <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-charcoal/10 bg-[#eee8df] transition-transform duration-300 group-hover:-translate-y-0.5">
+          <span className="flex h-[68px] w-[92px] items-center justify-center border border-charcoal/10 bg-warm-white/95 px-2.5 py-2 transition-transform duration-300 group-hover:-translate-y-0.5">
             <Image
               src={withBasePath("/images/logo.png")}
               alt=""
               width={637}
               height={480}
               priority
-              className="h-[30px] w-auto object-contain"
+              className="h-full w-full object-contain"
             />
           </span>
           <span>
-            <span className="block font-serif text-lg leading-none tracking-[-0.02em] text-charcoal">
+            <span className={`block font-serif text-lg leading-none tracking-[-0.02em] transition-colors duration-500 ${isSolid ? "text-charcoal" : "text-warm-white"}`}>
               The Córdova Studio
             </span>
-            <span className="mt-1.5 hidden text-[0.56rem] uppercase tracking-[0.24em] text-muted sm:block">
+            <span className={`mt-1.5 hidden text-[0.56rem] uppercase tracking-[0.24em] transition-colors duration-500 sm:block ${isSolid ? "text-muted" : "text-warm-white/62"}`}>
               Interior Architecture &amp; Design
             </span>
           </span>
@@ -70,7 +76,7 @@ export default function Navigation() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="relative py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-charcoal/72 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:text-charcoal hover:after:origin-left hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                  className={`relative py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${isSolid ? "text-charcoal/72 hover:text-charcoal" : "text-warm-white/78 hover:text-warm-white"}`}
                 >
                   {link.label}
                 </a>
@@ -79,7 +85,7 @@ export default function Navigation() {
           </ul>
           <a
             href={withBasePath("/#contact")}
-            className="rounded-full bg-studio-green px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-warm-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            className={`rounded-full px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.18em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${isSolid ? "bg-studio-green text-warm-white hover:bg-charcoal" : "bg-warm-white text-studio-green hover:bg-accent-light"}`}
           >
             Inquire
           </a>
@@ -88,7 +94,7 @@ export default function Navigation() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-charcoal/15 text-charcoal md:hidden"
+          className={`flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border transition-colors duration-500 md:hidden ${isSolid ? "border-charcoal/15 text-charcoal" : "border-warm-white/45 text-warm-white"}`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
@@ -100,20 +106,19 @@ export default function Navigation() {
 
       <div
         className={`absolute inset-x-0 top-full overflow-hidden border-b border-charcoal/10 bg-warm-white shadow-[0_24px_60px_rgba(16,40,36,0.12)] transition-all duration-500 md:hidden ${
-          menuOpen ? "max-h-[calc(100svh-76px)] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          menuOpen ? "max-h-[calc(100svh-100px)] opacity-100" : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
         <div className="section-shell py-8">
           <ul className="space-y-1">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-between border-b border-charcoal/10 py-5 font-serif text-2xl text-charcoal"
+                  className="block border-b border-charcoal/10 py-5 font-serif text-2xl text-charcoal"
                 >
                   {link.label}
-                  <span className="font-sans text-[0.65rem] tracking-[0.18em] text-muted">0{index + 1}</span>
                 </a>
               </li>
             ))}
@@ -124,6 +129,7 @@ export default function Navigation() {
           </p>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 }

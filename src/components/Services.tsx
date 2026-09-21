@@ -83,14 +83,13 @@ export default function Services() {
           </div>
 
           <div className="border-t border-warm-white/18">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
-              className="group grid gap-5 border-b border-warm-white/18 py-8 transition-colors duration-500 hover:bg-warm-white/[0.035] sm:grid-cols-[4rem_1fr] sm:px-4 sm:py-10"
+              className="group grid grid-cols-[3.25rem_1fr] gap-4 border-b border-warm-white/18 py-8 transition-colors duration-500 hover:bg-warm-white/[0.035] sm:gap-5 sm:px-4 sm:py-10"
             >
-              <div className="flex items-center justify-between sm:block">
-                <span className="text-[0.65rem] uppercase tracking-[0.2em] text-accent-light/70">0{index + 1}</span>
-                <span className="mt-5 hidden h-10 w-10 items-center justify-center rounded-full border border-accent/35 text-accent-light transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-studio-green sm:flex">
+              <div>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/35 text-accent-light transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-studio-green">
                   <ServiceIcon type={service.icon} />
                 </span>
               </div>

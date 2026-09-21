@@ -55,13 +55,12 @@ export default function About() {
             </div>
 
             <div className="mt-12 border-y border-charcoal/12 py-2">
-              {principles.map((principle, index) => (
+              {principles.map((principle) => (
                 <div
                   key={principle}
-                  className="flex items-center justify-between border-b border-charcoal/10 py-4 last:border-b-0"
+                  className="border-b border-charcoal/10 py-4 last:border-b-0"
                 >
                   <span className="font-serif text-lg text-charcoal">{principle}</span>
-                  <span className="text-[0.65rem] uppercase tracking-[0.2em] text-muted">0{index + 1}</span>
                 </div>
               ))}
             </div>

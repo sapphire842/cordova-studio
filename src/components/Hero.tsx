@@ -7,7 +7,7 @@ export default function Hero() {
   const ref = useReveal();
 
   return (
-    <section className="relative min-h-[calc(100svh-76px)] overflow-hidden bg-studio-green">
+    <section className="relative min-h-[100svh] overflow-hidden bg-studio-green">
       <img
         src={withBasePath("/images/hero-bg.jpg")}
         alt="A warmly styled living room by The Córdova Studio"
@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,28,24,0.94)_0%,rgba(8,28,24,0.78)_38%,rgba(8,28,24,0.22)_72%,rgba(8,28,24,0.08)_100%)] max-md:bg-[linear-gradient(180deg,rgba(8,28,24,0.78)_0%,rgba(8,28,24,0.48)_42%,rgba(8,28,24,0.92)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,18,16,0.05),rgba(7,18,16,0.42))]" />
 
-      <div className="section-shell relative z-10 flex min-h-[calc(100svh-76px)] items-end pb-28 pt-24 md:items-center md:pb-28 md:pt-28">
+      <div className="section-shell relative z-10 flex min-h-[100svh] items-end pb-28 pt-32 md:items-center md:pb-28 md:pt-36">
         <div ref={ref} className="fade-in max-w-[47rem]">
           <p className="eyebrow text-accent-light">
             Interior Architecture &amp; Design
