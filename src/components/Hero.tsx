@@ -16,14 +16,16 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,28,24,0.96)_0%,rgba(8,28,24,0.82)_34%,rgba(8,28,24,0.26)_68%,rgba(8,28,24,0.08)_100%)] max-md:bg-[linear-gradient(180deg,rgba(8,28,24,0.76)_0%,rgba(8,28,24,0.38)_38%,rgba(8,28,24,0.9)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,18,16,0.12),rgba(7,18,16,0.5))]" />
 
-      <div className="section-shell relative z-10 grid min-h-[100svh] items-end gap-12 pb-28 pt-36 md:grid-cols-[minmax(0,1fr)_16rem] md:pb-24">
-        <div ref={ref} className="fade-in max-w-[49rem] self-center md:pt-14">
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-16 right-[12%] top-[116px] hidden w-[18rem] border-x border-warm-white/10 md:block" />
+
+      <div className="section-shell relative z-10 grid min-h-[100svh] items-end gap-12 pb-28 pt-40 md:grid-cols-[minmax(0,1fr)_18rem] md:pb-24 md:pt-44">
+        <div ref={ref} className="fade-in max-w-[50rem] self-center md:pt-14">
           <p className="eyebrow text-accent-light">
             California interiors, considered slowly
           </p>
-          <h1 className="mt-8 font-serif text-[clamp(4.2rem,8.8vw,8.5rem)] font-normal leading-[0.84] tracking-[-0.055em] text-warm-white">
+          <h1 className="mt-8 font-serif text-[clamp(4rem,8.2vw,8rem)] font-normal leading-[0.92] tracking-[-0.032em] text-warm-white">
             Rooms with
-            <span className="block pl-[0.38em] italic text-accent-light">
+            <span className="mt-1 block pl-[0.34em] italic leading-[0.92] text-accent-light">
               a point of view.
             </span>
           </h1>
@@ -50,16 +52,17 @@ export default function Hero() {
           </div>
         </div>
 
-        <aside className="hidden self-end border-l border-warm-white/25 pb-4 pl-6 text-sm font-light leading-6 text-warm-white/68 md:block">
-          <p className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-accent-light">Studio premise</p>
-          <p className="mt-4 font-serif text-xl leading-7 text-warm-white">A home should reveal itself slowly—and hold up to real life.</p>
+        <aside className="hidden min-h-[16rem] self-end border-l border-t border-warm-white/30 bg-studio-green/20 p-6 text-sm font-light leading-6 text-warm-white/68 backdrop-blur-[2px] md:flex md:flex-col md:justify-end">
+          <p className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-accent-light">The Córdova Edit</p>
+          <p className="mt-5 font-serif text-2xl leading-8 text-warm-white">A home should reveal itself slowly—and hold up to real life.</p>
+          <p className="mt-6 border-t border-warm-white/20 pt-4 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/58">Material · light · ritual</p>
         </aside>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-warm-white/15 bg-studio-green/36 backdrop-blur-md">
         <div className="section-shell flex min-h-16 items-center justify-between gap-6 text-[0.68rem] uppercase tracking-[0.2em] text-warm-white/60">
-          <span>Walnut Creek · California</span>
-          <span className="hidden sm:inline">Interior architecture &amp; design</span>
+          <span>Based in Walnut Creek · California</span>
+          <span className="hidden sm:inline">Serving the San Francisco Bay Area</span>
           <a href="#about" className="transition-colors hover:text-accent-light">
             Studio philosophy ↓
           </a>

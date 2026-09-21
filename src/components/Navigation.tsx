@@ -36,7 +36,7 @@ export default function Navigation() {
 
   return (
     <>
-      {!isHome && <div aria-hidden="true" className="h-[100px]" />}
+      {!isHome && <div aria-hidden="true" className="h-[116px]" />}
       <header
         className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-500 ${
           isSolid
@@ -44,13 +44,13 @@ export default function Navigation() {
             : "border-warm-white/18 bg-transparent"
         }`}
       >
-      <nav className="section-shell flex min-h-[100px] items-center justify-between">
+      <nav className="section-shell flex min-h-[116px] items-center justify-between">
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="The Córdova Studio home"
         >
-          <span className="flex h-[72px] w-[100px] items-center justify-center transition-transform duration-300 group-hover:-translate-y-0.5">
+          <span className="flex h-[62px] w-[84px] items-center justify-center transition-transform duration-300 group-hover:-translate-y-0.5 sm:h-[86px] sm:w-[120px]">
             <Image
               src={withBasePath("/images/logo.png")}
               alt=""
@@ -61,10 +61,10 @@ export default function Navigation() {
             />
           </span>
           <span>
-            <span className={`block font-serif text-lg leading-none tracking-[-0.02em] transition-colors duration-500 ${isSolid ? "text-charcoal" : "text-warm-white"}`}>
+            <span className={`block font-serif text-[1.12rem] leading-none tracking-[-0.025em] transition-colors duration-500 sm:text-[1.45rem] md:text-[1.65rem] ${isSolid ? "text-charcoal" : "text-warm-white"}`}>
               The Córdova Studio
             </span>
-            <span className={`mt-1.5 hidden text-[0.56rem] uppercase tracking-[0.24em] transition-colors duration-500 sm:block ${isSolid ? "text-muted" : "text-warm-white/62"}`}>
+            <span className={`mt-2 hidden whitespace-nowrap text-[0.65rem] uppercase tracking-[0.2em] transition-colors duration-500 sm:block ${isSolid ? "text-muted" : "text-warm-white/68"}`}>
               Interior Architecture &amp; Design
             </span>
           </span>
@@ -106,7 +106,7 @@ export default function Navigation() {
 
       <div
         className={`absolute inset-x-0 top-full overflow-hidden border-b border-charcoal/10 bg-warm-white shadow-[0_24px_60px_rgba(16,40,36,0.12)] transition-all duration-500 md:hidden ${
-          menuOpen ? "max-h-[calc(100svh-100px)] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          menuOpen ? "max-h-[calc(100svh-116px)] opacity-100" : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
         <div className="section-shell py-8">
