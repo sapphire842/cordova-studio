@@ -4,11 +4,11 @@
 @theme {
   --color-charcoal: #18211e;
   --color-studio-green: #102824;
-  --color-warm-white: #f5f1ea;
+  --color-warm-white: #eee8de;
   --color-accent: #b99a69;
   --color-accent-light: #d9c9ad;
   --color-muted: #766f65;
-  --color-light-gray: #e7e1d8;
+  --color-light-gray: #e1d9ce;
 
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -83,6 +83,10 @@ textarea {
     inset 0 -22px 42px rgb(0 0 0 / 0.2),
     inset 0 1px 0 rgb(255 255 255 / 0.08),
     inset 0 -1px 0 rgb(255 255 255 / 0.06);
+}
+
+.logo-on-hero {
+  filter: brightness(0) invert(1) sepia(0.35) saturate(0.56) hue-rotate(350deg);
 }
 
 /* Fade-in animation for scroll reveals */

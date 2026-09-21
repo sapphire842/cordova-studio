@@ -176,7 +176,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[#ebe5dc] py-24 md:py-32 lg:py-40">
+    <section id="contact" className="bg-[#e6ded2] py-24 md:py-32 lg:py-40">
       <div className="section-shell">
         <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <div ref={ref} className="fade-in">

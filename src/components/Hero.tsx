@@ -19,13 +19,13 @@ export default function Hero() {
       <div aria-hidden="true" className="pointer-events-none absolute bottom-16 right-[12%] top-[116px] hidden w-[18rem] border-x border-warm-white/10 md:block" />
 
       <div className="section-shell relative z-10 grid min-h-[100svh] items-end gap-12 pb-28 pt-40 md:grid-cols-[minmax(0,1fr)_18rem] md:pb-24 md:pt-44">
-        <div ref={ref} className="fade-in max-w-[50rem] self-center md:pt-14">
+        <div ref={ref} className="fade-in max-w-[60rem] self-center md:pt-14">
           <p className="eyebrow text-accent-light">
             California interiors, considered slowly
           </p>
-          <h1 className="mt-8 font-serif text-[clamp(4rem,8.2vw,8rem)] font-normal leading-[0.92] tracking-[-0.032em] text-warm-white">
+          <h1 className="mt-8 font-serif text-[clamp(3.75rem,7vw,7rem)] font-normal leading-[0.98] tracking-[-0.018em] text-warm-white">
             Rooms with
-            <span className="mt-1 block pl-[0.34em] italic leading-[0.92] text-accent-light">
+            <span className="mt-2 block pl-[0.3em] italic leading-[0.98] text-accent-light xl:whitespace-nowrap">
               a point of view.
             </span>
           </h1>

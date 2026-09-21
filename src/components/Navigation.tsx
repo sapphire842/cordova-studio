@@ -57,7 +57,7 @@ export default function Navigation() {
               width={637}
               height={480}
               priority
-              className={`h-full w-full object-contain ${isSolid ? "" : "brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"}`}
+              className={`h-full w-full object-contain ${isSolid ? "" : "logo-on-hero drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"}`}
             />
           </span>
           <span>
