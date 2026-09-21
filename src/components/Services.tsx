@@ -66,12 +66,12 @@ export default function Services() {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <p className="eyebrow text-accent-light">Our Services</p>
             <h2 className="mt-7 font-serif text-[clamp(3rem,5vw,5.2rem)] leading-[0.98] tracking-[-0.04em] text-warm-white">
-              From first thought
-              <span className="block italic text-accent-light">to final detail.</span>
+              Meet the project
+              <span className="block italic text-accent-light">where it is.</span>
             </h2>
             <p className="mt-7 max-w-md text-base font-light leading-7 text-warm-white/62">
-              Flexible design support for a focused room, a whole-home
-              transformation, or the decisions that bring everything together.
+              Choose a focused consultation, an entire furnishing plan, or the
+              spatial direction that gives a larger project its footing.
             </p>
             <a
               href="#contact"

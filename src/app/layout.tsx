@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${githubPagesOrigin}/`),
   title: "The Córdova Studio — Interior Architecture & Design",
   description:
-    "Timeless interior design rooted in natural aesthetics. Space planning, design consultations, and full home design in the San Francisco Bay Area.",
+    "Interior architecture and design for expressive, livable homes across the San Francisco Bay Area.",
   keywords: [
     "interior design",
     "interior architecture",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Córdova Studio — Interior Architecture & Design",
     description:
-      "Timeless interior design rooted in natural aesthetics.",
+      "Interior architecture and design for expressive, livable homes.",
     url: siteUrl,
     siteName: "The Córdova Studio",
     locale: "en_US",

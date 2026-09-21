@@ -13,6 +13,13 @@ export function useReveal(): RefObject<HTMLDivElement | null> {
     const el = ref.current;
     if (!el) return;
 
+    // A direct link to a section should never leave its content hidden while
+    // the browser settles its initial hash scroll position.
+    if (window.location.hash) {
+      el.classList.add("visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,7 +27,7 @@ export function useReveal(): RefObject<HTMLDivElement | null> {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" }
     );
 
     observer.observe(el);
