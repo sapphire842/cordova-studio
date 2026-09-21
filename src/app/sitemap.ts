@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
+import { siteUrl } from "@/lib/site";
 
-const siteUrl = "https://thecordovastudio.com";
 const siteUpdatedAt = "2026-04-30";
 export const dynamic = "force-static";
 

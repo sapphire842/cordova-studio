@@ -3,135 +3,127 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/site";
+
+const navLinks = [
+  { label: "Studio", href: withBasePath("/#about") },
+  { label: "Work", href: withBasePath("/#portfolio") },
+  { label: "Services", href: withBasePath("/#services") },
+  { label: "Contact", href: withBasePath("/#contact") },
+];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 32);
     onScroll();
-
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = [
-    { label: "About", href: "/#about" },
-    { label: "Portfolio", href: "/#portfolio" },
-    { label: "Services", href: "/#services" },
-    { label: "Contact", href: "/#contact" },
-  ];
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`sticky top-0 z-50 border-b transition-all duration-500 ${
         scrolled
-          ? "bg-warm-white shadow-sm"
-          : "bg-warm-white shadow-md"
+          ? "border-charcoal/10 bg-warm-white/92 shadow-[0_10px_40px_rgba(16,40,36,0.07)] backdrop-blur-xl"
+          : "border-charcoal/8 bg-warm-white"
       }`}
     >
-      <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-500 lg:px-12 ${
-          scrolled ? "min-h-[68px] py-3" : "min-h-[84px] py-2"
-        }`}
-      >
+      <nav className="section-shell flex min-h-[76px] items-center justify-between">
         <Link
           href="/"
-          className={`relative inline-flex w-[220px] items-center transition-[height] duration-500 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
-            scrolled ? "h-[42px]" : "h-[72px]"
-          }`}
-          aria-label="The Cordova Studio home"
+          className="group flex items-center gap-3 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          aria-label="The Córdova Studio home"
         >
-          <span
-            className={`absolute left-0 top-1/2 flex h-full w-[96px] -translate-y-1/2 items-center justify-center transition-opacity duration-700 ease-out ${
-              scrolled
-                ? "pointer-events-none opacity-0"
-                : "opacity-100 hover:drop-shadow-2xl"
-            }`}
-            aria-hidden={scrolled}
-          >
+          <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-charcoal/10 bg-[#eee8df] transition-transform duration-300 group-hover:-translate-y-0.5">
             <Image
-              src="/images/logo.png"
-              alt="The Cordova Studio"
+              src={withBasePath("/images/logo.png")}
+              alt=""
               width={637}
               height={480}
               priority
-              className="h-full w-full object-contain"
+              className="h-[30px] w-auto object-contain"
             />
           </span>
-          <span
-            className={`absolute left-0 top-1/2 flex -translate-y-1/2 items-center font-serif text-xl text-charcoal transition-opacity duration-700 ease-out hover:text-accent ${
-              scrolled
-                ? "opacity-100"
-                : "pointer-events-none opacity-0"
-            }`}
-            aria-hidden={!scrolled}
-          >
-            The Córdova Studio
+          <span>
+            <span className="block font-serif text-lg leading-none tracking-[-0.02em] text-charcoal">
+              The Córdova Studio
+            </span>
+            <span className="mt-1.5 hidden text-[0.56rem] uppercase tracking-[0.24em] text-muted sm:block">
+              Interior Architecture &amp; Design
+            </span>
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <ul className="hidden gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className={`text-sm font-light uppercase tracking-widest transition-colors ${
-                  scrolled
-                    ? "text-charcoal hover:text-accent"
-                    : "text-charcoal hover:text-accent"
-                }`}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex flex-col gap-1.5 text-charcoal md:hidden"
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block h-px w-6 bg-charcoal transition-all ${
-              menuOpen ? "translate-y-[3.5px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-charcoal transition-all ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-charcoal transition-all ${
-              menuOpen ? "-translate-y-[3.5px] -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="absolute inset-x-0 top-full bg-warm-white/98 backdrop-blur-lg md:hidden">
-          <ul className="flex flex-col items-center gap-6 py-8">
+        <div className="hidden items-center gap-10 md:flex">
+          <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-sm uppercase tracking-widest text-charcoal hover:text-accent"
+                  className="relative py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-charcoal/72 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:text-charcoal hover:after:origin-left hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
+          <a
+            href={withBasePath("/#contact")}
+            className="rounded-full bg-studio-green px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-warm-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            Inquire
+          </a>
         </div>
-      )}
+
+        <button
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-charcoal/15 text-charcoal md:hidden"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+        >
+          <span className={`block h-px w-5 bg-current transition-transform ${menuOpen ? "translate-y-[3.5px] rotate-45" : ""}`} />
+          <span className={`block h-px w-5 bg-current transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-px w-5 bg-current transition-transform ${menuOpen ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
+        </button>
+      </nav>
+
+      <div
+        className={`absolute inset-x-0 top-full overflow-hidden border-b border-charcoal/10 bg-warm-white shadow-[0_24px_60px_rgba(16,40,36,0.12)] transition-all duration-500 md:hidden ${
+          menuOpen ? "max-h-[calc(100svh-76px)] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+        }`}
+      >
+        <div className="section-shell py-8">
+          <ul className="space-y-1">
+            {navLinks.map((link, index) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center justify-between border-b border-charcoal/10 py-5 font-serif text-2xl text-charcoal"
+                >
+                  {link.label}
+                  <span className="font-sans text-[0.65rem] tracking-[0.18em] text-muted">0{index + 1}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-sm leading-6 text-muted">
+            Walnut Creek, California<br />
+            Serving the San Francisco Bay Area
+          </p>
+        </div>
+      </div>
     </header>
   );
 }

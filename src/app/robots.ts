@@ -1,13 +1,13 @@
 import type { MetadataRoute } from "next";
+import { githubPagesBasePath, siteUrl } from "@/lib/site";
 
-const siteUrl = "https://thecordovastudio.com";
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
+      allow: `${githubPagesBasePath}/`,
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   };

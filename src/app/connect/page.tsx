@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
+import { siteUrl, withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Córdova Studio | Connect",
   description:
     "Portfolio and contact information for Omar Córdova García, The Córdova Studio.",
   alternates: {
-    canonical: "/connect",
+    canonical: `${siteUrl}/connect/`,
   },
 };
 
 const links = [
   {
     label: "Save Omar to Contacts",
-    href: "/Omar_Cordova_Garcia.vcf",
+    href: withBasePath("/Omar_Cordova_Garcia.vcf"),
     primary: true,
     download: true,
   },
   {
     label: "View Website & Portfolio",
-    href: "https://thecordovastudio.com",
+    href: siteUrl,
   },
   {
     label: "Email Omar",

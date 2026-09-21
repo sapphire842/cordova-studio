@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import ProjectGallery from "@/components/ProjectGallery";
 import PortfolioBookViewer from "@/components/PortfolioBookViewer";
 import ProjectCard from "@/components/ProjectCard";
+import { siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -26,12 +27,12 @@ export async function generateMetadata({
     title: `${project.title} — The Córdova Studio`,
     description: project.summary,
     alternates: {
-      canonical: `/projects/${project.slug}`,
+      canonical: `${siteUrl}/projects/${project.slug}/`,
     },
     openGraph: {
       title: `${project.title} — The Córdova Studio`,
       description: project.summary,
-      url: `/projects/${project.slug}`,
+      url: `${siteUrl}/projects/${project.slug}/`,
       siteName: "The Córdova Studio",
       type: "article",
       images: project.coverImage

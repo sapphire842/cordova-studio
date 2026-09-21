@@ -60,35 +60,51 @@ export default function Services() {
   const ref = useReveal();
 
   return (
-    <section id="services" className="services-texture services-inset py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-12">
-        <div ref={ref} className="fade-in mb-16">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-            What We Offer
-          </p>
-          <h2 className="font-serif text-4xl text-warm-white md:text-5xl">
-            Services
-          </h2>
-        </div>
+    <section id="services" className="services-texture services-inset py-24 md:py-32 lg:py-40">
+      <div className="section-shell">
+        <div ref={ref} className="fade-in grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+          <div className="lg:sticky lg:top-32 lg:self-start">
+            <p className="eyebrow text-accent-light">Our Services</p>
+            <h2 className="mt-7 font-serif text-[clamp(3rem,5vw,5.2rem)] leading-[0.98] tracking-[-0.04em] text-warm-white">
+              From first thought
+              <span className="block italic text-accent-light">to final detail.</span>
+            </h2>
+            <p className="mt-7 max-w-md text-base font-light leading-7 text-warm-white/62">
+              Flexible design support for a focused room, a whole-home
+              transformation, or the decisions that bring everything together.
+            </p>
+            <a
+              href="#contact"
+              className="group mt-9 inline-flex items-center gap-4 rounded-full border border-warm-white/30 px-6 py-4 text-xs font-medium uppercase tracking-[0.18em] text-warm-white transition-all duration-300 hover:border-accent-light hover:bg-warm-white/6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            >
+              Discuss your project
+              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
 
-        <div className="grid gap-1 md:grid-cols-2">
-          {services.map((service) => (
+          <div className="border-t border-warm-white/18">
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="group relative overflow-hidden border border-warm-white/10 bg-warm-white/[0.02] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:bg-warm-white/[0.06] hover:shadow-[0_22px_60px_rgba(0,0,0,0.26)] focus-within:-translate-y-1 focus-within:border-accent/50 focus-within:bg-warm-white/[0.06] focus-within:shadow-[0_22px_60px_rgba(0,0,0,0.26)]"
+              className="group grid gap-5 border-b border-warm-white/18 py-8 transition-colors duration-500 hover:bg-warm-white/[0.035] sm:grid-cols-[4rem_1fr] sm:px-4 sm:py-10"
             >
-              <span className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100 group-focus-within:scale-x-100" />
-              <span className="mb-5 flex h-12 w-12 items-center justify-center border border-accent/35 text-accent-light transition-all duration-500 group-hover:-translate-y-0.5 group-hover:border-accent group-hover:bg-accent group-hover:text-charcoal group-focus-within:-translate-y-0.5 group-focus-within:border-accent group-focus-within:bg-accent group-focus-within:text-charcoal">
-                <ServiceIcon type={service.icon} />
-              </span>
-              <h3 className="mb-3 font-serif text-lg text-warm-white transition-colors duration-500 group-hover:text-accent-light group-focus-within:text-accent-light">
-                {service.title}
-              </h3>
-              <p className="text-sm font-light leading-relaxed text-warm-white/60 transition-colors duration-500 group-hover:text-warm-white/78 group-focus-within:text-warm-white/78">
-                {service.description}
-              </p>
+              <div className="flex items-center justify-between sm:block">
+                <span className="text-[0.65rem] uppercase tracking-[0.2em] text-accent-light/70">0{index + 1}</span>
+                <span className="mt-5 hidden h-10 w-10 items-center justify-center rounded-full border border-accent/35 text-accent-light transition-all duration-500 group-hover:border-accent group-hover:bg-accent group-hover:text-studio-green sm:flex">
+                  <ServiceIcon type={service.icon} />
+                </span>
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl text-warm-white transition-colors duration-500 group-hover:text-accent-light md:text-3xl">
+                  {service.title}
+                </h3>
+                <p className="mt-3 max-w-xl text-sm font-light leading-6 text-warm-white/58 transition-colors duration-500 group-hover:text-warm-white/76 md:text-base md:leading-7">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

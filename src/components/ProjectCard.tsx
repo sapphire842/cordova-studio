@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useReveal } from "@/lib/utils";
 import type { Project } from "@/data/projects";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, index }: { project: Project; index?: number }) {
   const ref = useReveal();
   const imageRadiusClass =
     project.imageRadius === "4px"
@@ -21,23 +21,44 @@ export default function ProjectCard({ project }: { project: Project }) {
     project.parentSlug === "furnishing-styling";
   const roundedImageClass = imageRadiusClass || (hasFurnishingRoundedImage ? "rounded-[6px]" : "");
 
+  const layoutClass =
+    index === undefined
+      ? ""
+      : index === 0
+      ? "md:col-span-8"
+      : index === 1
+        ? "md:col-span-4 md:pt-24"
+        : index === 2
+          ? "md:col-span-5 md:pt-10"
+          : "md:col-span-7";
+
+  const aspectClass =
+    index === undefined
+      ? "aspect-[4/3]"
+      : index === 0
+      ? "aspect-[4/3] md:aspect-[16/11]"
+      : index === 1
+        ? "aspect-[4/5]"
+        : index === 2
+          ? "aspect-[4/5]"
+          : "aspect-[4/3] md:aspect-[16/11]";
+
   return (
-    <div ref={ref} className="fade-in group">
+    <article ref={ref} className={`fade-in group ${layoutClass}`}>
       <Link
         href={`/projects/${project.slug}`}
-        className="block transition-transform duration-500 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-accent"
+        className="block focus-visible:rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-accent"
       >
         <div
-          className={`img-zoom relative aspect-[4/3] overflow-hidden bg-light-gray transition-shadow duration-500 group-hover:shadow-[0_22px_60px_rgba(26,26,26,0.16)] ${
+          className={`img-zoom relative ${aspectClass} overflow-hidden rounded-[0.9rem] bg-light-gray transition-all duration-700 group-hover:-translate-y-1 group-hover:shadow-[0_28px_70px_rgba(16,40,36,0.18)] ${
             roundedImageClass
           }`}
         >
-          <span className="absolute inset-x-0 top-0 z-10 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100 group-focus-within:scale-x-100" />
           {project.coverImage ? (
             <img
               src={project.coverImage}
               alt={project.title}
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
               loading="lazy"
             />
           ) : (
@@ -52,25 +73,29 @@ export default function ProjectCard({ project }: { project: Project }) {
               </div>
             </div>
           )}
+          <div className="absolute inset-0 bg-gradient-to-t from-studio-green/55 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <span className="absolute bottom-5 right-5 flex h-12 w-12 translate-y-3 items-center justify-center rounded-full bg-warm-white text-lg text-studio-green opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100" aria-hidden="true">
+            ↗
+          </span>
         </div>
 
-        <div className="mt-5 transition-transform duration-500 group-hover:translate-x-1">
-          <div className="flex items-baseline justify-between">
-            <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-accent">
-              {project.category}
+        <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-start">
+          <div>
+            <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-accent">
+              {project.number} / {project.category}
             </p>
-            <p className="text-[10px] tracking-widest text-muted">
-              {project.location}
-            </p>
+            <h3 className="mt-2 font-serif text-2xl tracking-[-0.02em] text-charcoal transition-colors group-hover:text-studio-green md:text-3xl">
+              {project.title}
+            </h3>
           </div>
-          <h3 className="mt-2 font-serif text-xl text-charcoal transition-colors group-hover:text-accent md:text-2xl">
-            {project.title}
-          </h3>
-          <p className="mt-2 text-sm font-light leading-relaxed text-charcoal/60 transition-colors duration-500 group-hover:text-charcoal/72">
-            {project.summary}
+          <p className="text-xs uppercase tracking-[0.16em] text-muted sm:pt-1 sm:text-right">
+            {project.location}
           </p>
         </div>
+        <p className="mt-3 max-w-xl text-sm font-light leading-6 text-charcoal/60 transition-colors duration-500 group-hover:text-charcoal/75">
+          {project.summary}
+        </p>
       </Link>
-    </div>
+    </article>
   );
 }

@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/site";
+
 export interface Project {
   slug: string;
   number: string;
@@ -20,7 +22,7 @@ export interface Project {
   placeholderLabel?: string;
 }
 
-export const projects: Project[] = [
+const rawProjects: Project[] = [
   {
     slug: "renovations-transformations",
     number: "01",
@@ -444,6 +446,13 @@ export const projects: Project[] = [
     parentSlug: "furnishing-styling",
   },
 ];
+
+export const projects: Project[] = rawProjects.map((project) => ({
+  ...project,
+  coverImage: project.coverImage ? withBasePath(project.coverImage) : "",
+  images: project.images.map(withBasePath),
+  pdfUrl: project.pdfUrl ? withBasePath(project.pdfUrl) : undefined,
+}));
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);

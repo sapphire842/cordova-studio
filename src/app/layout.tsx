@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { githubPagesOrigin, siteUrl, withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thecordovastudio.com"),
+  metadataBase: new URL(`${githubPagesOrigin}/`),
   title: "The Córdova Studio — Interior Architecture & Design",
   description:
     "Timeless interior design rooted in natural aesthetics. Space planning, design consultations, and full home design in the San Francisco Bay Area.",
@@ -22,13 +23,13 @@ export const metadata: Metadata = {
     title: "The Córdova Studio — Interior Architecture & Design",
     description:
       "Timeless interior design rooted in natural aesthetics.",
-    url: "https://thecordovastudio.com",
+    url: siteUrl,
     siteName: "The Córdova Studio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: withBasePath("/images/hero-bg.jpg"),
         width: 1200,
         height: 630,
         alt: "The Córdova Studio interior architecture and design",
@@ -37,12 +38,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.png", type: "image/png", sizes: "256x256" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: withBasePath("/favicon.ico"), sizes: "any" },
+      { url: withBasePath("/favicon.png"), type: "image/png", sizes: "256x256" },
+      { url: withBasePath("/icon.png"), type: "image/png", sizes: "512x512" },
     ],
-    shortcut: ["/favicon.ico"],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [withBasePath("/favicon.ico")],
+    apple: [{ url: withBasePath("/apple-icon.png"), sizes: "180x180", type: "image/png" }],
   },
 };
 

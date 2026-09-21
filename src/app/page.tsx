@@ -4,10 +4,11 @@ import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/",
+    canonical: `${siteUrl}/`,
   },
 };
 

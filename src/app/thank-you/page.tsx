@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Thank You — The Córdova Studio",
   description: "Thank you for contacting The Córdova Studio.",
   alternates: {
-    canonical: "/thank-you",
+    canonical: `${siteUrl}/thank-you/`,
   },
   robots: {
     index: false,

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { withBasePath } from "@/lib/site";
 import type { PDFDocumentProxy, PDFPageProxy } from "pdfjs-dist";
 
 type PdfJs = typeof import("pdfjs-dist");
@@ -65,7 +66,7 @@ export default function PortfolioBookViewer({
     async function loadPdf() {
       setIsLoading(true);
       const pdfJs = await import("pdfjs-dist");
-      pdfJs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+      pdfJs.GlobalWorkerOptions.workerSrc = withBasePath("/pdf.worker.min.mjs");
       pdfJsRef.current = pdfJs;
       const loadedPdf = await pdfJs.getDocument(pdfUrl).promise;
       if (!cancelled) {
