@@ -50,14 +50,14 @@ export default function Navigation() {
           className="group flex items-center gap-3 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="The Córdova Studio home"
         >
-          <span className="flex h-[68px] w-[92px] items-center justify-center border border-charcoal/10 bg-warm-white/95 px-2.5 py-2 transition-transform duration-300 group-hover:-translate-y-0.5">
+          <span className="flex h-[72px] w-[100px] items-center justify-center transition-transform duration-300 group-hover:-translate-y-0.5">
             <Image
               src={withBasePath("/images/logo.png")}
               alt=""
               width={637}
               height={480}
               priority
-              className="h-full w-full object-contain"
+              className={`h-full w-full object-contain ${isSolid ? "" : "brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"}`}
             />
           </span>
           <span>
