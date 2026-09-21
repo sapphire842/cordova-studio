@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <Link href="/" className="inline-block font-serif text-3xl tracking-[-0.03em] transition-colors hover:text-accent-light">
-              The Córdova Studio
+              The Córdova Studio<sup className="ml-0.5 align-top text-[0.42em] font-sans font-medium">™</sup>
             </Link>
             <p className="mt-3 max-w-sm text-sm font-light leading-6 text-warm-white/55">
               Interior architecture and design shaped around natural materials,
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-3 pt-7 text-xs text-warm-white/42 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {year} The Córdova Studio. All rights reserved.</p>
+          <p>&copy; {year} The Córdova Studio™. All rights reserved.</p>
           <p>Walnut Creek · San Francisco Bay Area</p>
         </div>
       </div>
