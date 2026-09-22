@@ -13,12 +13,6 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-studio-green text-warm-white">
-      <img
-        src={withBasePath("/images/footer-floor-plan.svg")}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[32%] -right-[8%] w-[min(76rem,118vw)] max-w-none opacity-25"
-      />
       <div className="section-shell relative py-12 md:py-16">
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
@@ -49,6 +43,13 @@ export default function Footer() {
           <p>&copy; {year} The Córdova Studio™. All rights reserved.</p>
           <p>Walnut Creek · San Francisco Bay Area</p>
         </div>
+      </div>
+      <div className="relative h-24 overflow-hidden border-t border-warm-white/12 bg-[#0d2521] md:h-28" aria-hidden="true">
+        <img
+          src={withBasePath("/images/footer-floor-plan.svg")}
+          alt=""
+          className="absolute bottom-[-1.1rem] left-1/2 w-[min(45rem,82vw)] max-w-none -translate-x-1/2 opacity-55"
+        />
       </div>
     </footer>
   );
