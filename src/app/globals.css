@@ -58,22 +58,23 @@ textarea {
   isolation: isolate;
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.4vw, 4.1rem);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.92;
-  transform: rotate(-1.5deg);
 }
 
 .eyebrow::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: -0.18em -0.28em -0.14em;
-  border-radius: 52% 48% 46% 54% / 58% 44% 56% 42%;
+  bottom: -0.08em;
+  left: -0.18em;
+  top: -0.08em;
+  width: 0.14em;
+  border-radius: 999px;
   background: currentColor;
-  opacity: 0.11;
-  transform: rotate(3.5deg);
+  opacity: 0.34;
 }
 
 .services-texture {
