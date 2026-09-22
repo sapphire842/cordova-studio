@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withBasePath } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,8 +12,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-studio-green text-warm-white">
-      <div className="section-shell py-12 md:py-16">
+    <footer className="relative overflow-hidden bg-studio-green text-warm-white">
+      <img
+        src={withBasePath("/images/projects/space planning/gallery-1.png")}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-[48%] -right-[12%] w-[min(72rem,115vw)] max-w-none opacity-[0.055] grayscale invert contrast-125 mix-blend-screen"
+      />
+      <div className="section-shell relative py-12 md:py-16">
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <Link href="/" className="inline-block font-serif text-3xl tracking-[-0.03em] transition-colors hover:text-accent-light">
