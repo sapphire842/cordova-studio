@@ -14,10 +14,10 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-studio-green text-warm-white">
       <img
-        src={withBasePath("/images/projects/space planning/gallery-1.png")}
+        src={withBasePath("/images/footer-floor-plan.svg")}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[48%] -right-[12%] w-[min(72rem,115vw)] max-w-none opacity-[0.055] grayscale invert contrast-125 mix-blend-screen"
+        className="pointer-events-none absolute -bottom-[32%] -right-[8%] w-[min(76rem,118vw)] max-w-none opacity-25"
       />
       <div className="section-shell relative py-12 md:py-16">
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">

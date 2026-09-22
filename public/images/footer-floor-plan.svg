@@ -1,0 +1,28 @@
+<svg width="1440" height="330" viewBox="0 0 1440 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#D9C9AD" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 58H376V116H548V58H980V116H1324V270H1018V222H842V270H542V222H376V270H72V58Z" stroke-width="2"/>
+    <path d="M376 58V270M548 116V222M842 116V270M980 58V222M1018 222V270" stroke-width="1.25"/>
+    <path d="M72 155H376M548 174H842M980 168H1324" stroke-width="1.25"/>
+    <path d="M376 116H548M842 116H980" stroke-width="1.25"/>
+    <path d="M168 58V88M168 88A44 44 0 0 0 212 132M212 132H248" stroke-width="1.25"/>
+    <path d="M628 222V196M628 196A38 38 0 0 1 666 158M666 158H704" stroke-width="1.25"/>
+    <path d="M1080 222V194M1080 194A42 42 0 0 1 1122 152M1122 152H1158" stroke-width="1.25"/>
+    <rect x="118" y="95" width="178" height="42" rx="2" stroke-width="1.25"/>
+    <rect x="143" y="105" width="56" height="22" rx="11" stroke-width="1"/>
+    <rect x="216" y="105" width="56" height="22" rx="11" stroke-width="1"/>
+    <rect x="430" y="139" width="84" height="62" rx="2" stroke-width="1.25"/>
+    <circle cx="472" cy="170" r="22" stroke-width="1"/>
+    <rect x="592" y="139" width="192" height="52" rx="2" stroke-width="1.25"/>
+    <path d="M640 139V191M688 139V191M736 139V191" stroke-width="1"/>
+    <rect x="864" y="82" width="88" height="22" rx="2" stroke-width="1"/>
+    <rect x="1048" y="98" width="194" height="40" rx="2" stroke-width="1.25"/>
+    <rect x="1096" y="68" width="46" height="30" rx="2" stroke-width="1"/>
+    <path d="M1176 98V138M1208 98V138" stroke-width="1"/>
+    <rect x="112" y="190" width="156" height="48" rx="2" stroke-width="1.25"/>
+    <path d="M136 214H244M190 190V238" stroke-width="1"/>
+    <rect x="410" y="238" width="94" height="18" rx="2" stroke-width="1"/>
+    <rect x="860" y="238" width="126" height="18" rx="2" stroke-width="1"/>
+    <path d="M24 38H338M24 38V28M338 38V28M24 28H338" stroke-width="1" stroke-dasharray="2 5"/>
+    <path d="M1062 292H1298M1062 292V282M1298 292V282M1062 282H1298" stroke-width="1" stroke-dasharray="2 5"/>
+  </g>
+</svg>
