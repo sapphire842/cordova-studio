@@ -8,7 +8,7 @@ export default function Footer() {
     { label: "Instagram", href: "https://www.instagram.com/thecordovastudio" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/omar-cordova-garcia/" },
     { label: "Email", href: "mailto:omar@thecordovastudio.com" },
-    { label: "Client Portal", href: "https://invoice.zohosecure.com/portal/cordovastudio/signin" },
+    { label: "Client Access", href: withBasePath("/client-access") },
   ];
 
   return (

@@ -13,6 +13,8 @@ const navLinks = [
   { label: "Contact", href: withBasePath("/#contact") },
 ];
 
+const clientAccessHref = withBasePath("/client-access");
+
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -83,12 +85,20 @@ export default function Navigation() {
               </li>
             ))}
           </ul>
-          <a
-            href={withBasePath("/#contact")}
-            className={`rounded-full px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.18em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${isSolid ? "bg-studio-green text-warm-white hover:bg-charcoal" : "bg-warm-white text-studio-green hover:bg-accent-light"}`}
-          >
-            Inquire
-          </a>
+          <div className="flex items-center gap-3">
+            <Link
+              href={clientAccessHref}
+              className={`rounded-full border px-4 py-3 text-[0.62rem] font-medium uppercase tracking-[0.16em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${isSolid ? "border-studio-green/35 text-studio-green hover:border-studio-green hover:bg-studio-green hover:text-warm-white" : "border-warm-white/50 text-warm-white hover:border-warm-white hover:bg-warm-white hover:text-studio-green"}`}
+            >
+              Client Access
+            </Link>
+            <a
+              href={withBasePath("/#contact")}
+              className={`rounded-full px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.18em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${isSolid ? "bg-studio-green text-warm-white hover:bg-charcoal" : "bg-warm-white text-studio-green hover:bg-accent-light"}`}
+            >
+              Inquire
+            </a>
+          </div>
         </div>
 
         <button
@@ -127,6 +137,13 @@ export default function Navigation() {
             Walnut Creek, California<br />
             Serving the San Francisco Bay Area
           </p>
+          <Link
+            href={clientAccessHref}
+            onClick={() => setMenuOpen(false)}
+            className="mt-7 inline-flex rounded-full border border-studio-green/25 px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.16em] text-studio-green"
+          >
+            Client Access
+          </Link>
         </div>
       </div>
       </header>
