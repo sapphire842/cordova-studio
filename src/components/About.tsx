@@ -13,7 +13,8 @@ export default function About() {
       <div ref={ref} className="section-shell fade-in">
         <div className="grid items-start gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           <div className="relative lg:sticky lg:top-28">
-            <div className="relative overflow-hidden bg-light-gray shadow-[0_32px_90px_rgba(16,40,36,0.12)]">
+            <div aria-hidden="true" className="absolute -bottom-6 -right-5 h-32 w-32 rounded-full bg-accent/35 blur-[1px] lg:-bottom-8 lg:-right-8 lg:h-44 lg:w-44" />
+            <div className="relative overflow-hidden rounded-[1.75rem] bg-light-gray shadow-[0_32px_90px_rgba(16,40,36,0.12)]">
               <img
                 src={withBasePath("/images/headshot.jpg")}
                 alt="Omar Córdova García, founder and interior designer"
@@ -24,7 +25,6 @@ export default function About() {
                 <p className="mt-1 font-serif text-xl">Omar Córdova García</p>
               </div>
             </div>
-            <div className="absolute -bottom-5 -left-5 hidden h-20 w-20 border border-accent/55 lg:block" aria-hidden="true" />
           </div>
 
           <div className="lg:pt-8">
