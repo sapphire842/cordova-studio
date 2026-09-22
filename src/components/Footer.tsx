@@ -17,7 +17,7 @@ export default function Footer() {
         src={withBasePath("/images/footer-floor-plan.svg")}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-5 hidden w-[min(28rem,30vw)] max-w-none -translate-x-1/2 opacity-35 lg:block"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-10"
       />
       <div className="section-shell relative py-12 md:py-16">
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
