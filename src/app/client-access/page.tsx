@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteUrl, withBasePath } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
 
 const portalUrl = "https://invoice.zohosecure.com/portal/cordovastudio/signin";
 
@@ -55,7 +55,7 @@ export default function ClientAccessPage() {
             <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-studio-green/65">New to the portal?</p>
             <p className="mt-3 max-w-xl text-sm leading-7 text-studio-green/75">Omar will send a secure invitation when your project begins. Use the same email address each time you sign in.</p>
           </div>
-          <Link href={withBasePath("/#contact")} className="inline-flex shrink-0 items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-studio-green transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Need an invitation? <span aria-hidden="true" className="text-lg">→</span></Link>
+          <Link href="/#contact" className="inline-flex shrink-0 items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-studio-green transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Need an invitation? <span aria-hidden="true" className="text-lg">→</span></Link>
         </div>
       </section>
     </div>

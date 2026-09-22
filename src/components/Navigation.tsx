@@ -13,7 +13,8 @@ const navLinks = [
   { label: "Contact", href: withBasePath("/#contact") },
 ];
 
-const clientAccessHref = withBasePath("/client-access");
+// Next's Link component applies the configured basePath automatically.
+const clientAccessHref = "/client-access";
 
 export default function Navigation() {
   const pathname = usePathname();
