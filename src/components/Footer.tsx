@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid gap-10 border-b border-warm-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <Link href="/" className="inline-block font-serif text-3xl tracking-[-0.03em] transition-colors hover:text-accent-light">
-              The Córdova Studio<sup className="ml-0.5 align-top text-[0.42em] font-sans font-medium">™</sup>
+              The Córdova Studio<sup className="relative ml-0.5 top-[0.16em] align-baseline text-[0.42em] font-sans font-medium">™</sup>
             </Link>
             <p className="mt-3 max-w-sm text-sm font-light leading-6 text-warm-white/55">
               Interior architecture and design shaped around natural materials,
