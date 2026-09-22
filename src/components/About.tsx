@@ -53,16 +53,18 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-12 border-y border-charcoal/12 py-2">
-              {principles.map((principle) => (
-                <div
-                  key={principle}
-                  className="border-b border-charcoal/10 py-4 last:border-b-0"
-                >
-                  <span className="font-serif text-lg text-charcoal">{principle}</span>
-                </div>
-              ))}
-            </div>
+            <aside className="mt-12" aria-labelledby="studio-principles">
+              <h3 id="studio-principles" className="font-serif text-xl italic text-studio-green/75">
+                A few principles that guide the work
+              </h3>
+              <ul className="mt-5 grid gap-5 sm:grid-cols-3 sm:gap-4">
+                {principles.map((principle) => (
+                  <li key={principle} className="border-l-2 border-accent/65 pl-4">
+                    <span className="font-serif text-xl leading-tight text-charcoal">{principle}</span>
+                  </li>
+                ))}
+              </ul>
+            </aside>
 
             <a
               href="#contact"
