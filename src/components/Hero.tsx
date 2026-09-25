@@ -16,8 +16,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,28,24,0.96)_0%,rgba(8,28,24,0.82)_34%,rgba(8,28,24,0.26)_68%,rgba(8,28,24,0.08)_100%)] max-md:bg-[linear-gradient(180deg,rgba(8,28,24,0.76)_0%,rgba(8,28,24,0.38)_38%,rgba(8,28,24,0.9)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,18,16,0.12),rgba(7,18,16,0.5))]" />
 
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-16 right-[12%] top-[116px] hidden w-[18rem] border-x border-warm-white/10 md:block" />
-
       <div className="section-shell relative z-10 grid min-h-[100svh] items-end gap-12 pb-28 pt-40 md:grid-cols-[minmax(0,1fr)_18rem] md:pb-24 md:pt-44">
         <div ref={ref} className="fade-in max-w-[60rem] self-center md:pt-14">
           <p className="eyebrow text-accent-light">
