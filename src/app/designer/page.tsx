@@ -18,6 +18,8 @@ const materialLibrary = [
   { category: "Objects", name: "Trade studio placeholder", note: "Collected accents that give a home its own point of view." },
 ];
 
+const studioTools = ["AutoCAD", "Revit", "SketchUp", "3D visualization", "Material specification", "Space planning"];
+
 export default function DesignerPage() {
   return (
     <div className="bg-warm-white text-charcoal">
@@ -56,10 +58,20 @@ export default function DesignerPage() {
             <p className="eyebrow text-accent">Practice &amp; perspective</p>
             <h2 className="mt-4 max-w-sm font-serif text-3xl leading-tight tracking-[-0.04em] md:text-4xl">Precise enough to draw. Human enough to live in.</h2>
           </div>
-          <div className="max-w-md space-y-5 border-t border-charcoal/18 pt-5 text-sm leading-7 text-charcoal/68">
-            <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
-            <p><span className="font-medium text-charcoal">English &amp; Spanish.</span> Clear communication is part of the design work.</p>
-            <p><span className="font-medium text-charcoal">ASID practitioner member.</span> Connected to the wider interior design community in California North.</p>
+          <div className="grid gap-10 md:grid-cols-2">
+            <div>
+              <p className="border-t border-charcoal/18 pt-5 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/55">Omar&apos;s working language</p>
+              <ul className="mt-5 divide-y divide-charcoal/15">
+                {studioTools.map((tool) => (
+                  <li key={tool} className="py-3 font-serif text-2xl tracking-[-0.025em] text-charcoal/78 first:pt-0">{tool}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-5 border-t border-charcoal/18 pt-5 text-sm leading-7 text-charcoal/68">
+              <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
+              <p><span className="font-medium text-charcoal">English &amp; Spanish.</span> Clear communication is part of the design work.</p>
+              <p><span className="font-medium text-charcoal">ASID practitioner member.</span> Connected to the wider interior design community in California North.</p>
+            </div>
           </div>
         </div>
       </section>
