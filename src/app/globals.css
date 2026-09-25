@@ -67,14 +67,13 @@ textarea {
 .eyebrow::before {
   content: "";
   position: absolute;
-  z-index: -1;
-  bottom: -0.08em;
   left: -0.18em;
-  top: -0.08em;
-  width: 0.14em;
-  border-radius: 999px;
-  background: currentColor;
-  opacity: 0.34;
+  top: -0.2em;
+  width: 2.4em;
+  height: 1.05em;
+  border-left: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+  opacity: 0.62;
 }
 
 .services-texture {
