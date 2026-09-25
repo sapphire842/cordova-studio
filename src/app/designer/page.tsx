@@ -59,11 +59,9 @@ export default function DesignerPage() {
             <h2 className="mt-4 max-w-sm font-serif text-3xl leading-tight tracking-[-0.04em] md:text-4xl">Precise enough to draw. Human enough to live in.</h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
-            <div>
-              <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/55">Studio tools</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {studioTools.map((tool) => <span key={tool} className="border border-charcoal/18 px-3 py-2 text-xs text-charcoal/70">{tool}</span>)}
-              </div>
+            <div className="border-t border-charcoal/18 pt-5">
+              <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/55">Working across</p>
+              <p className="mt-4 max-w-sm font-serif text-2xl leading-tight tracking-[-0.025em] text-charcoal/78">{studioTools.join(" · ")}</p>
             </div>
             <div className="space-y-5 text-sm leading-7 text-charcoal/68">
               <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
