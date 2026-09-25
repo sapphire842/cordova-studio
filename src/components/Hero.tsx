@@ -9,9 +9,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-studio-green">
       <img
-        src={withBasePath("/images/projects/furnishing-styling/single-family-residence-dublin/cover.jpg")}
-        alt="A warm, layered living room designed by The Córdova Studio"
-        className="absolute inset-0 h-full w-full object-cover object-[58%_center] animate-hero-zoom"
+        src={withBasePath("/images/projects/pleasanton-office-remodel/cover.jpg")}
+        alt="A warm, wood-lined office interior designed by The Córdova Studio"
+        className="absolute inset-0 h-full w-full object-cover object-[54%_center] animate-hero-zoom"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,28,24,0.96)_0%,rgba(8,28,24,0.82)_34%,rgba(8,28,24,0.26)_68%,rgba(8,28,24,0.08)_100%)] max-md:bg-[linear-gradient(180deg,rgba(8,28,24,0.76)_0%,rgba(8,28,24,0.38)_38%,rgba(8,28,24,0.9)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,18,16,0.12),rgba(7,18,16,0.5))]" />
