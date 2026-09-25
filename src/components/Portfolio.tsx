@@ -13,7 +13,10 @@ export default function Portfolio() {
       <div className="section-shell">
         <div className="mb-14 grid items-end gap-8 border-b border-charcoal/20 pb-10 md:grid-cols-[1fr_19rem] lg:mb-20">
           <div>
-            <p className="eyebrow text-accent">Selected Work</p>
+            <div className="flex items-center gap-4">
+              <img src={withBasePath("/images/studio-room-mark.svg")} alt="" aria-hidden="true" className="h-10 w-10 opacity-80" />
+              <p className="eyebrow text-accent">Selected Work</p>
+            </div>
             <h2 className="mt-7 max-w-3xl font-serif text-[clamp(3.4rem,6.6vw,6.5rem)] leading-[0.88] tracking-[-0.05em] text-charcoal">
               Studies in
               <span className="block pl-[0.32em] italic text-studio-green/75">living well.</span>
