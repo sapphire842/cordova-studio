@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import ProjectGallery from "@/components/ProjectGallery";
 import PortfolioBookViewer from "@/components/PortfolioBookViewer";
 import ProjectCard from "@/components/ProjectCard";
-import { siteUrl } from "@/lib/site";
+import { siteUrl, withBasePath } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -88,9 +88,17 @@ export default async function ProjectPage({
           )}
         </div>
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-12">
-          <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-            {project.category} · {project.location}
-          </p>
+          <div className="mb-3 flex items-center gap-3">
+            <img
+              src={withBasePath("/images/studio-room-mark.svg")}
+              alt=""
+              aria-hidden="true"
+              className="h-7 w-7 opacity-90"
+            />
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent">
+              {project.category} · {project.location}
+            </p>
+          </div>
           <div className="flex items-end gap-6">
             <span
               className={`font-serif text-7xl font-light md:text-9xl ${
