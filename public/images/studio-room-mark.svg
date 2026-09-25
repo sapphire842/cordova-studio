@@ -1,0 +1,9 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>The Córdova Studio room mark</title>
+  <path d="M18 18H78V78H42" stroke="#B99A69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 18V48" stroke="#B99A69" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M18 60V78" stroke="#B99A69" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M18 48H42C48.627 48 54 53.373 54 60V78" stroke="#B99A69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 18V32" stroke="#B99A69" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="48" cy="39" r="4" fill="#F5B82E"/>
+</svg>

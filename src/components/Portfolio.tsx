@@ -2,6 +2,7 @@
 
 import { getPortfolioProjects } from "@/data/projects";
 import Link from "next/link";
+import { withBasePath } from "@/lib/site";
 
 export default function Portfolio() {
   const projects = getPortfolioProjects();
@@ -40,7 +41,15 @@ export default function Portfolio() {
             <div className="flex flex-col justify-between p-8 text-warm-white md:p-10 lg:p-12">
               <div>
                 <p className="font-serif text-xl italic text-accent-light/95">Featured project</p>
-                <p className="mt-7 text-[0.64rem] font-medium uppercase tracking-[0.22em] text-accent-light/65">{featuredProject.category} · {featuredProject.location}</p>
+                <div className="mt-7 flex items-center gap-3">
+                  <img
+                    src={withBasePath("/images/studio-room-mark.svg")}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-7 w-7 shrink-0 opacity-80"
+                  />
+                  <p className="text-[0.64rem] font-medium uppercase tracking-[0.22em] text-accent-light/65">{featuredProject.category} · {featuredProject.location}</p>
+                </div>
                 <h3 className="mt-4 font-serif text-4xl leading-[0.96] tracking-[-0.04em] text-warm-white md:text-5xl">
                   {featuredProject.title}
                 </h3>
