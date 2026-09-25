@@ -18,6 +18,8 @@ const materialLibrary = [
   { category: "Objects", name: "Trade studio placeholder", note: "Collected accents that give a home its own point of view." },
 ];
 
+const studioTools = ["AutoCAD", "Revit", "SketchUp", "3D visualization", "Material specification", "Space planning"];
+
 export default function DesignerPage() {
   return (
     <div className="bg-warm-white text-charcoal">
@@ -44,9 +46,31 @@ export default function DesignerPage() {
           <h2 className="mt-5 max-w-sm font-serif text-4xl leading-[0.98] tracking-[-0.045em] md:text-5xl">Good rooms make daily life feel more possible.</h2>
         </div>
         <div className="max-w-2xl space-y-6 text-base font-light leading-8 text-charcoal/72 md:text-lg md:leading-9">
-          <p>With a BFA in Interior Architecture &amp; Design from the Academy of Art University, Omar brings academic rigor and practical experience to residential and commercial interiors across the San Francisco Bay Area.</p>
-          <p>Every project begins with listening: understanding the people, the space, and what it needs to hold. His work balances natural materials, intuitive planning, and the quiet details that make a space feel personal.</p>
+          <p>Omar is an Interior Architectural Designer and CAD Drafter whose work moves comfortably between concept and construction detail. He develops residential interiors from field measurements and existing conditions through space planning, design development, and final presentation.</p>
+          <p>With a BFA in Interior Architecture &amp; Design from the Academy of Art University—earned Magna Cum Laude in a CIDA-accredited program—he brings academic rigor and practical experience to every room. His practice is informed by time spent in design-led retail and staging, where he learned to listen closely, source thoughtfully, and make a vision tangible.</p>
           <p>The result is an interior that is expressive without being precious—designed to support the rituals, gatherings, and ordinary moments that give a home its meaning.</p>
+        </div>
+      </section>
+
+      <section className="border-y border-charcoal/12 bg-[#e4dbcf] px-6 py-16 md:py-20">
+        <div className="section-shell grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-20">
+          <div>
+            <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">Practice &amp; perspective</p>
+            <h2 className="mt-4 max-w-sm font-serif text-3xl leading-tight tracking-[-0.04em] md:text-4xl">Precise enough to draw. Human enough to live in.</h2>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2">
+            <div>
+              <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/55">Studio tools</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {studioTools.map((tool) => <span key={tool} className="border border-charcoal/18 px-3 py-2 text-xs text-charcoal/70">{tool}</span>)}
+              </div>
+            </div>
+            <div className="space-y-5 text-sm leading-7 text-charcoal/68">
+              <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
+              <p><span className="font-medium text-charcoal">English &amp; Spanish.</span> Clear communication is part of the design work.</p>
+              <p><span className="font-medium text-charcoal">ASID practitioner member.</span> Connected to the wider interior design community in California North.</p>
+            </div>
+          </div>
         </div>
       </section>
 
