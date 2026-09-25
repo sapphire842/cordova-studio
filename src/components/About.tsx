@@ -2,6 +2,7 @@
 
 import { useReveal } from "@/lib/utils";
 import { withBasePath } from "@/lib/site";
+import Link from "next/link";
 
 const principles = ["Natural aesthetics", "Purposeful planning", "Enduring comfort"];
 
@@ -73,6 +74,13 @@ export default function About() {
               Work with the studio
               <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
+            <Link
+              href="/designer"
+              className="group mt-6 flex w-fit items-center gap-4 text-xs font-medium uppercase tracking-[0.18em] text-charcoal/60 transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            >
+              Meet the designer
+              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+            </Link>
           </div>
         </div>
       </div>
