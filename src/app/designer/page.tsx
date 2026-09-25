@@ -18,8 +18,6 @@ const materialLibrary = [
   { category: "Objects", name: "Trade studio placeholder", note: "Collected accents that give a home its own point of view." },
 ];
 
-const studioTools = ["AutoCAD", "Revit", "SketchUp", "3D visualization", "Material specification", "Space planning"];
-
 export default function DesignerPage() {
   return (
     <div className="bg-warm-white text-charcoal">
@@ -58,16 +56,10 @@ export default function DesignerPage() {
             <p className="eyebrow text-accent">Practice &amp; perspective</p>
             <h2 className="mt-4 max-w-sm font-serif text-3xl leading-tight tracking-[-0.04em] md:text-4xl">Precise enough to draw. Human enough to live in.</h2>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2">
-            <div className="border-t border-charcoal/18 pt-5">
-              <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/55">Working across</p>
-              <p className="mt-4 max-w-sm font-serif text-2xl leading-tight tracking-[-0.025em] text-charcoal/78">{studioTools.join(" · ")}</p>
-            </div>
-            <div className="space-y-5 text-sm leading-7 text-charcoal/68">
-              <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
-              <p><span className="font-medium text-charcoal">English &amp; Spanish.</span> Clear communication is part of the design work.</p>
-              <p><span className="font-medium text-charcoal">ASID practitioner member.</span> Connected to the wider interior design community in California North.</p>
-            </div>
+          <div className="max-w-md space-y-5 border-t border-charcoal/18 pt-5 text-sm leading-7 text-charcoal/68">
+            <p><span className="font-medium text-charcoal">Based in Walnut Creek.</span> Serving the San Francisco Bay Area with a collaborative, detail-minded approach.</p>
+            <p><span className="font-medium text-charcoal">English &amp; Spanish.</span> Clear communication is part of the design work.</p>
+            <p><span className="font-medium text-charcoal">ASID practitioner member.</span> Connected to the wider interior design community in California North.</p>
           </div>
         </div>
       </section>
