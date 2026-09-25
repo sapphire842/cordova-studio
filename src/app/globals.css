@@ -76,6 +76,24 @@ textarea {
   opacity: 0.62;
 }
 
+.section-kicker {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.section-kicker::before {
+  content: "";
+  position: absolute;
+  left: -0.7rem;
+  top: -0.45rem;
+  width: 2.1rem;
+  height: 0.72rem;
+  border-left: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+  opacity: 0.62;
+}
+
 .services-texture {
   background-color: var(--color-studio-green);
   background-image:

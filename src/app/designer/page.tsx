@@ -27,7 +27,7 @@ export default function DesignerPage() {
         <div className="pointer-events-none absolute -right-24 top-20 h-80 w-80 rounded-full border border-accent/30 md:h-[30rem] md:w-[30rem]" aria-hidden="true" />
         <div className="section-shell relative grid items-end gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
-            <p className="mb-7 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-studio-green/65">The designer</p>
+            <p className="section-kicker mb-7 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-studio-green/65">The designer</p>
             <h1 className="max-w-4xl font-serif text-[clamp(4rem,10vw,9.5rem)] leading-[0.86] tracking-[-0.07em] text-studio-green">Omar<br />Córdova<br />García</h1>
             <p className="mt-9 max-w-xl text-lg font-light leading-8 text-charcoal/70 md:text-xl">Interior architecture shaped by material warmth, thoughtful planning, and the way people actually live.</p>
           </div>
@@ -42,7 +42,7 @@ export default function DesignerPage() {
 
       <section className="section-shell grid gap-12 py-20 md:py-28 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
         <div>
-          <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">A working philosophy</p>
+          <p className="section-kicker text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">A working philosophy</p>
           <h2 className="mt-5 max-w-sm font-serif text-4xl leading-[0.98] tracking-[-0.045em] md:text-5xl">Good rooms make daily life feel more possible.</h2>
         </div>
         <div className="max-w-2xl space-y-6 text-base font-light leading-8 text-charcoal/72 md:text-lg md:leading-9">
@@ -55,7 +55,7 @@ export default function DesignerPage() {
       <section className="border-y border-charcoal/12 bg-[#e4dbcf] px-6 py-16 md:py-20">
         <div className="section-shell grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-20">
           <div>
-            <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">Practice &amp; perspective</p>
+            <p className="section-kicker text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">Practice &amp; perspective</p>
             <h2 className="mt-4 max-w-sm font-serif text-3xl leading-tight tracking-[-0.04em] md:text-4xl">Precise enough to draw. Human enough to live in.</h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -77,7 +77,7 @@ export default function DesignerPage() {
       <section className="bg-studio-green px-6 py-20 text-warm-white md:py-28">
         <div className="section-shell">
           <div className="max-w-2xl">
-            <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent-light">The material library</p>
+            <p className="section-kicker text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent-light">The material library</p>
             <h2 className="mt-5 font-serif text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-[-0.055em]">A working palette.</h2>
             <p className="mt-7 max-w-xl text-base font-light leading-7 text-warm-white/65">A growing reference of trade relationships, makers, and material sources Omar returns to when a project calls for something particular.</p>
           </div>
@@ -99,7 +99,7 @@ export default function DesignerPage() {
 
       <section className="section-shell flex flex-col gap-8 py-20 md:flex-row md:items-end md:justify-between md:py-28">
         <div>
-          <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">A room worth beginning</p>
+          <p className="section-kicker text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">A room worth beginning</p>
           <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight tracking-[-0.04em] md:text-6xl">Bring us the room that almost works.</h2>
         </div>
         <Link href="/#contact" className="inline-flex shrink-0 items-center gap-4 border-b border-accent pb-3 text-xs font-medium uppercase tracking-[0.2em] text-charcoal transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Start a conversation <span aria-hidden="true">→</span></Link>
