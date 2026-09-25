@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
 
         <aside className="hidden min-h-[16rem] self-end border-l border-t border-warm-white/30 bg-studio-green/20 p-6 text-sm font-light leading-6 text-warm-white/68 backdrop-blur-[2px] md:flex md:flex-col md:justify-end">
-          <p className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-accent-light">The Córdova Edit</p>
+          <p className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-accent-light">A studio point of view</p>
           <p className="mt-5 font-serif text-2xl leading-8 text-warm-white">A home should reveal itself slowly—and hold up to real life.</p>
           <p className="mt-6 border-t border-warm-white/20 pt-4 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/58">Material · light · ritual</p>
         </aside>
