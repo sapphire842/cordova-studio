@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 };
 
 const materialLibrary = [
-  { category: "Lighting", name: "Trade studio placeholder", note: "A considered source for sculptural light and warm evening atmospheres." },
-  { category: "Furniture", name: "Trade studio placeholder", note: "Pieces selected for proportion, comfort, and the way they settle into a room." },
-  { category: "Textiles", name: "Trade studio placeholder", note: "Natural textures that bring softness and depth to everyday spaces." },
-  { category: "Surfaces", name: "Trade studio placeholder", note: "Materials with enough character to grow more beautiful through use." },
-  { category: "Hardware", name: "Trade studio placeholder", note: "The quiet, tactile details that make a room feel resolved." },
-  { category: "Objects", name: "Trade studio placeholder", note: "Collected accents that give a home its own point of view." },
+  { category: "Wood", name: "Walnut & oak", note: "Natural woods that bring depth, warmth, and a quiet sense of permanence." },
+  { category: "Stone", name: "Stone & marble", note: "Grounded surfaces that give a room its weight and a material point of view." },
+  { category: "Textile", name: "Linen & wool", note: "Tactile layers that soften architecture and make a room more inviting." },
+  { category: "Leather", name: "Aged leather", note: "A living material that develops character and rewards everyday use." },
+  { category: "Metal", name: "Brass & blackened steel", note: "Refined contrasts that sharpen a palette without overpowering it." },
+  { category: "Earthen", name: "Plaster, tile & woven fiber", note: "Organic surfaces that connect an interior to craft, touch, and place." },
 ];
 
 const studioTools = ["AutoCAD", "Revit", "SketchUp", "3D visualization", "Material specification", "Space planning"];
@@ -46,9 +46,9 @@ export default function DesignerPage() {
           <h2 className="mt-5 max-w-sm font-serif text-4xl leading-[0.98] tracking-[-0.045em] md:text-5xl">Good rooms make daily life feel more possible.</h2>
         </div>
         <div className="max-w-2xl space-y-6 text-base font-light leading-8 text-charcoal/72 md:text-lg md:leading-9">
-          <p>Omar is an Interior Architectural Designer and CAD Drafter whose work moves comfortably between concept and construction detail. He develops residential interiors from field measurements and existing conditions through space planning, design development, and final presentation.</p>
-          <p>With a BFA in Interior Architecture &amp; Design from the Academy of Art University—earned Magna Cum Laude in a CIDA-accredited program—he brings academic rigor and practical experience to every room. His practice is informed by time spent in design-led retail and staging, where he learned to listen closely, source thoughtfully, and make a vision tangible.</p>
-          <p>The result is an interior that is expressive without being precious—designed to support the rituals, gatherings, and ordinary moments that give a home its meaning.</p>
+          <p>Omar Córdova is an interior architectural designer whose work is rooted in the belief that beautiful spaces should feel as good as they look. His approach combines thoughtful space planning, architectural awareness, and a strong appreciation for materials, furniture, and the details that give a space its character.</p>
+          <p>His aesthetic is warm, refined, and inviting, balancing clean, timeless forms with natural materials, organic textures, and moments of contrast. Omar draws from mid-century modern, Scandinavian, California modern, transitional, and organic contemporary interiors, allowing each project to develop an identity that feels authentic to the people who inhabit it.</p>
+          <p>Functionality is central to his process. He considers circulation, sightlines, seating, scale, durability, and the relationship between furniture and architecture to create interiors that feel intentional without feeling overly designed—spaces that are comfortable, approachable, and capable of evolving.</p>
         </div>
       </section>
 
@@ -81,7 +81,7 @@ export default function DesignerPage() {
           <div className="max-w-2xl">
             <p className="eyebrow text-accent-light">The material library</p>
             <h2 className="mt-5 font-serif text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-[-0.055em]">A working palette.</h2>
-            <p className="mt-7 max-w-xl text-base font-light leading-7 text-warm-white/65">A growing reference of trade relationships, makers, and material sources Omar returns to when a project calls for something particular.</p>
+            <p className="mt-7 max-w-xl text-base font-light leading-7 text-warm-white/65">A considered reference of natural, tactile materials and the furniture, lighting, and home sources Omar returns to when a project calls for something particular.</p>
           </div>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {materialLibrary.map((material, index) => (
@@ -95,7 +95,10 @@ export default function DesignerPage() {
               </article>
             ))}
           </div>
-          <p className="mt-7 text-xs uppercase tracking-[0.16em] text-warm-white/40">Trade account details will be added as the library is finalized.</p>
+          <div className="mt-16 border-t border-warm-white/18 pt-7">
+            <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/48">Trade access</p>
+            <p className="mt-4 max-w-4xl font-serif text-xl leading-8 text-warm-white/78">CB2 · Crate &amp; Barrel · Williams Sonoma Home · Pottery Barn · West Elm · Arhaus · RH · BenchMade Modern · Living Spaces · Lulu &amp; Georgia · Lamps Plus · Rejuvenation</p>
+          </div>
         </div>
       </section>
 
