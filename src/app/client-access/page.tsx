@@ -35,7 +35,7 @@ export default function ClientAccessPage() {
 
       <section className="section-shell grid gap-12 py-20 md:grid-cols-[0.8fr_1.2fr] md:gap-20 md:py-28">
         <div>
-          <p className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-accent">Your studio workspace</p>
+          <p className="eyebrow text-accent">Your studio workspace</p>
           <h2 className="mt-5 max-w-sm font-serif text-4xl leading-tight tracking-[-0.04em] md:text-5xl">Everything in its place.</h2>
         </div>
         <div className="grid gap-8 border-t border-charcoal/15 pt-7">
