@@ -17,7 +17,7 @@ export default function About() {
             <div aria-hidden="true" className="absolute -bottom-6 -right-5 h-32 w-32 rounded-full bg-accent/35 blur-[1px] lg:-bottom-8 lg:-right-8 lg:h-44 lg:w-44" />
             <div className="relative overflow-hidden rounded-[1.75rem] bg-light-gray shadow-[0_32px_90px_rgba(16,40,36,0.12)]">
               <img
-                src={withBasePath("/images/headshot.jpg")}
+                src={withBasePath("/images/headshot-retouched.png")}
                 alt="Omar Córdova García, founder and interior designer"
                 className="aspect-[16/11] h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.015]"
               />

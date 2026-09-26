@@ -34,7 +34,7 @@ export default function DesignerPage() {
           <div className="relative lg:justify-self-end">
             <div className="absolute -bottom-5 -left-5 h-28 w-28 rounded-full bg-accent/40" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-[2rem] bg-light-gray shadow-[0_28px_70px_rgba(16,40,36,0.16)]">
-              <img src={withBasePath("/images/headshot.jpg")} alt="Omar Córdova García, founder and interior designer" className="aspect-[4/5] w-full max-w-[28rem] object-cover object-center" />
+              <img src={withBasePath("/images/headshot-retouched.png")} alt="Omar Córdova García, founder and interior designer" className="aspect-[4/5] w-full max-w-[28rem] object-cover object-center" />
             </div>
           </div>
         </div>
