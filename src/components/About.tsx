@@ -42,15 +42,17 @@ export default function About() {
 
             <div className="mt-10 grid gap-6 text-base font-light leading-7 text-charcoal/70 sm:grid-cols-2">
               <p>
-                With a BFA in Interior Architecture &amp; Design from the Academy
-                of Art University, Omar brings academic rigor and practical
-                experience to residential and commercial interiors across the
-                Bay Area.
+                Omar Córdova is an interior architectural designer whose work
+                balances thoughtful space planning with a deep appreciation for
+                materials, furniture, and the details that give a room its
+                character.
               </p>
               <p>
-                Every project begins with listening: understanding the people,
-                the space, and what it needs to hold. The result is an interior
-                that feels personal, functional, and quietly distinctive.
+                His aesthetic is warm, refined, and inviting—grounded in natural
+                woods, stone, tactile textiles, and moments of contrast. Every
+                project begins with how a space will actually be lived in,
+                resulting in interiors that feel intentional without feeling
+                overly designed.
               </p>
             </div>
 
