@@ -23,7 +23,6 @@ export default function ClientAccessPage() {
       <section className="relative overflow-hidden bg-studio-green px-6 pb-20 pt-36 text-warm-white md:pb-28 md:pt-48">
         <div className="pointer-events-none absolute -right-20 top-16 h-72 w-72 rounded-full border border-accent-light/20 md:h-96 md:w-96" aria-hidden="true" />
         <div className="section-shell relative max-w-4xl">
-          <p className="mb-7 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-accent-light">A quiet place to keep things moving</p>
           <h1 className="max-w-3xl font-serif text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.055em]">Your project workspace.</h1>
           <p className="mt-9 max-w-xl text-lg font-light leading-8 text-warm-white/72 md:text-xl">
             Estimates, invoices, approvals, and project conversations—kept together in one secure workspace.
