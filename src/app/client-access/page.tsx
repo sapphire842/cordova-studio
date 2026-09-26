@@ -24,9 +24,9 @@ export default function ClientAccessPage() {
         <div className="pointer-events-none absolute -right-20 top-16 h-72 w-72 rounded-full border border-accent-light/20 md:h-96 md:w-96" aria-hidden="true" />
         <div className="section-shell relative max-w-4xl">
           <p className="mb-7 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-accent-light">A quiet place to keep things moving</p>
-          <h1 className="max-w-3xl font-serif text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.055em]">Client access, considered.</h1>
+          <h1 className="max-w-3xl font-serif text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.055em]">Your project workspace.</h1>
           <p className="mt-9 max-w-xl text-lg font-light leading-8 text-warm-white/72 md:text-xl">
-            Estimates, invoices, approvals, and project conversations—kept together in a secure workspace powered by Zoho Invoice.
+            Estimates, invoices, approvals, and project conversations—kept together in one secure workspace.
           </p>
           <a href={portalUrl} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-4 rounded-full bg-warm-white px-6 py-4 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-studio-green transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
             Sign in to client portal <span aria-hidden="true" className="text-lg leading-none">↗</span>
