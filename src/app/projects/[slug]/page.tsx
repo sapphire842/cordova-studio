@@ -128,17 +128,17 @@ export default async function ProjectPage({
 
           {/* Concept */}
           <div className="mb-16">
-            <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent">
+            <h2 className="content-heading mb-6 text-accent">
               Concept
             </h2>
-            <p className="text-sm font-light leading-relaxed text-charcoal/70">
+            <p className="max-w-3xl text-base font-light leading-8 text-charcoal/70 md:text-lg md:leading-9">
               {project.concept}
             </p>
           </div>
 
           {project.isCollection ? (
             <div className="mb-16">
-              <h2 className="mb-10 text-xs font-medium uppercase tracking-[0.3em] text-accent">
+              <h2 className="content-heading mb-10 text-accent">
                 Projects
               </h2>
               <div className="grid gap-12 md:grid-cols-2">
@@ -171,10 +171,10 @@ export default async function ProjectPage({
 
           {/* Approach */}
           <div className="mb-16">
-            <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent">
+            <h2 className="content-heading mb-6 text-accent">
               Design Approach
             </h2>
-            <p className="text-sm font-light leading-relaxed text-charcoal/70">
+            <p className="max-w-3xl text-base font-light leading-8 text-charcoal/70 md:text-lg md:leading-9">
               {project.approach}
             </p>
           </div>

@@ -76,6 +76,27 @@ textarea {
   opacity: 0.62;
 }
 
+.content-heading {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.content-heading::before {
+  content: "";
+  position: absolute;
+  left: -0.3rem;
+  top: -0.35rem;
+  width: 2.2rem;
+  height: 0.72rem;
+  border-left: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+  opacity: 0.62;
+}
+
 .services-texture {
   background-color: var(--color-studio-green);
   background-image:
