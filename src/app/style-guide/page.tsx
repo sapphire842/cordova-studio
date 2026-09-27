@@ -48,7 +48,7 @@ export default function StyleGuidePage() {
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             <div className="flex min-h-36 items-center justify-center border border-charcoal/15 bg-[#e4dbcf] p-8"><img src={withBasePath("/images/logo.png")} alt="The Córdova Studio logo" className="h-auto w-44" /></div>
             <div className="flex min-h-36 items-center justify-center border border-charcoal/15 bg-[#e4dbcf] p-8"><img src={withBasePath("/images/studio-room-mark.svg")} alt="Studio room mark" className="h-16 w-16" /></div>
-            <div className="flex min-h-36 items-center justify-center bg-charcoal p-8"><span className="font-serif text-3xl text-accent-light">Córdova™</span></div>
+            <div className="flex min-h-36 items-center justify-center bg-charcoal p-8"><span className="font-serif text-3xl text-accent-light">Córdova</span></div>
           </div>
         </section>
 
