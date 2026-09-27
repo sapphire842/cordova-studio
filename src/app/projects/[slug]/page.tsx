@@ -87,7 +87,7 @@ export default async function ProjectPage({
             <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(181,131,105,0.25),_transparent_45%),linear-gradient(135deg,_#f4ede3,_#e6dac9)]" />
           )}
         </div>
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-12">
+        <div className="section-shell relative z-10">
           <div className="mb-3 flex items-center gap-3">
             <img
               src={withBasePath("/images/studio-room-mark.svg")}
@@ -172,7 +172,7 @@ export default async function ProjectPage({
 
       {/* Project navigation */}
       <section className="border-t border-charcoal/10 bg-warm-white py-12">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 lg:px-12">
+        <div className="section-shell flex items-center justify-between">
           {prev ? (
             <Link
               href={`/projects/${prev.slug}`}
