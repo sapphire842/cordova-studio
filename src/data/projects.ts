@@ -34,7 +34,7 @@ const rawProjects: Project[] = [
     summary:
       "A collection of residential transformations focused on thoughtful updates, refreshed function, and elevated everyday living.",
     description:
-      "Renovations & Transformations brings together projects that reshape existing spaces with clearer function, warmer finishes, and a more intentional relationship between daily routines and design detail. Each project is organized as its own study so visitors can move through the work with the same editorial rhythm as the rest of the portfolio.",
+      "Renovations & Transformations is for homes that have good bones but no longer support the way you live. Omar brings clearer function, warmer finishes, and a more intentional relationship between daily routines and design detail to the spaces you already love.",
     concept:
       "A transformation-focused portfolio category where each project highlights the potential within an existing space, from layout improvements and finish direction to atmosphere, flow, and practical use.",
     approach:
