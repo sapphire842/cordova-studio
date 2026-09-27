@@ -117,6 +117,15 @@ export default async function ProjectPage({
       {/* Content */}
       <section className="bg-warm-white py-20 lg:py-28">
         <div className="section-shell">
+          {parentProject && (
+            <Link
+              href={`/projects/${parentProject.slug}`}
+              className="group mb-12 inline-flex items-center gap-3 border-b border-accent/60 pb-3 text-xs font-medium uppercase tracking-[0.18em] text-studio-green transition-colors hover:border-studio-green hover:text-accent"
+            >
+              <span aria-hidden="true">←</span>
+              Back to {parentProject.title}
+            </Link>
+          )}
           {/* Overview */}
           <p className="mb-16 font-serif text-xl leading-relaxed text-charcoal/80 md:text-2xl">
             {project.description}
@@ -176,15 +185,6 @@ export default async function ProjectPage({
       {/* Project navigation */}
       <section className="border-t border-charcoal/10 bg-warm-white py-12">
         <div className="section-shell flex flex-col gap-8">
-          {parentProject && (
-            <Link
-              href={`/projects/${parentProject.slug}`}
-              className="group inline-flex w-fit items-center gap-3 border-b border-accent/60 pb-3 text-xs font-medium uppercase tracking-[0.18em] text-studio-green transition-colors hover:border-studio-green hover:text-accent"
-            >
-              <span aria-hidden="true">←</span>
-              Back to {parentProject.title}
-            </Link>
-          )}
           <div className="flex items-center justify-between">
             {prev ? (
               <Link
