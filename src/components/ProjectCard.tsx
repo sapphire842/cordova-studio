@@ -92,7 +92,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             {project.location}
           </p>
         </div>
-        <p className="mt-3 max-w-xl text-sm font-light leading-6 text-charcoal/60 transition-colors duration-500 group-hover:text-charcoal/75">
+        <p className="mt-3 max-w-xl text-sm font-light leading-6 text-charcoal/72 transition-colors duration-500 group-hover:text-charcoal/85">
           {project.summary}
         </p>
       </Link>

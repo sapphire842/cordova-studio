@@ -25,12 +25,12 @@ export default function Footer() {
             <Link href="/" className="inline-block font-serif text-3xl tracking-[-0.03em] transition-colors hover:text-accent-light">
               The Córdova Studio
             </Link>
-            <p className="mt-3 max-w-sm text-sm font-light leading-6 text-warm-white/55">
+            <p className="mt-3 max-w-sm text-sm font-light leading-6 text-warm-white/72">
               Interior architecture and design shaped around natural materials,
               enduring comfort, and everyday life.
             </p>
           </div>
-          <div className="flex flex-wrap gap-x-7 gap-y-4 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-warm-white/65">
+          <div className="flex flex-wrap gap-x-7 gap-y-4 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-warm-white/82">
             {links.map((link) => (
               <a
                 key={link.label}
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pt-7 text-xs text-warm-white/42 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 pt-7 text-xs text-warm-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} The Córdova Studio. All rights reserved.</p>
           <p>Designed with Love in San Francisco</p>
         </div>

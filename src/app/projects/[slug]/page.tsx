@@ -136,12 +136,12 @@ export default async function ProjectPage({
               <section className="border-b border-charcoal/15 p-8 md:p-12 lg:border-b-0 lg:border-r lg:p-16">
                 <h2 className="font-sans text-xl font-medium tracking-[-0.025em] text-accent md:text-2xl">Concept</h2>
                 <p className="mt-7 max-w-xl text-base font-light leading-8 text-charcoal/72 md:text-lg md:leading-9">{project.concept}</p>
-                <p className="mt-10 max-w-md text-sm font-light leading-7 text-charcoal/58">The first move is to understand what the existing space can become.</p>
+                <p className="mt-10 max-w-md text-sm font-light leading-7 text-charcoal/72">The first move is to understand what the existing space can become.</p>
               </section>
               <section className="bg-studio-green p-8 text-warm-white md:p-12 lg:p-16">
                 <h2 className="font-sans text-xl font-medium tracking-[-0.025em] text-accent-light md:text-2xl">Design Approach</h2>
                 <p className="mt-7 max-w-xl text-base font-light leading-8 text-warm-white/76 md:text-lg md:leading-9">{project.approach}</p>
-                <p className="mt-10 border-t border-warm-white/18 pt-5 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-warm-white/48">Material · proportion · use</p>
+                <p className="mt-10 border-t border-warm-white/18 pt-5 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-warm-white/72">Material · proportion · use</p>
               </section>
             </div>
           </div>

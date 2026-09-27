@@ -43,17 +43,17 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="text-xs font-medium uppercase tracking-[0.2em] text-warm-white/62 transition-colors hover:text-warm-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-warm-white"
+              className="text-xs font-medium uppercase tracking-[0.2em] text-warm-white/82 transition-colors hover:text-warm-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-warm-white"
             >
               Begin a conversation
             </a>
           </div>
         </div>
 
-        <aside className="hidden min-h-[16rem] self-end border-l border-t border-warm-white/30 bg-studio-green/20 p-6 text-sm font-light leading-6 text-warm-white/68 backdrop-blur-[2px] md:flex md:flex-col md:justify-end">
+        <aside className="hidden min-h-[16rem] self-end border-l border-t border-warm-white/30 bg-studio-green/20 p-6 text-sm font-light leading-6 text-warm-white/82 backdrop-blur-[2px] md:flex md:flex-col md:justify-end">
           <p className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-accent-light">A studio point of view</p>
           <p className="mt-5 font-serif text-2xl leading-8 text-warm-white">A home should reveal itself slowly and hold up to real life.</p>
-          <p className="mt-6 border-t border-warm-white/20 pt-4 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/58">Material · light · ritual</p>
+          <p className="mt-6 border-t border-warm-white/20 pt-4 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/78">Material · light · ritual</p>
         </aside>
       </div>
 

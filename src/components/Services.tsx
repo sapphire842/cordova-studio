@@ -69,7 +69,7 @@ export default function Services() {
               Meet the project
               <span className="block italic text-accent-light">where it is.</span>
             </h2>
-            <p className="mt-7 max-w-md text-base font-light leading-7 text-warm-white/62">
+            <p className="mt-7 max-w-md text-base font-light leading-7 text-warm-white/82">
               Choose a focused consultation, an entire furnishing plan, or the
               spatial direction that gives a larger project its footing.
             </p>
@@ -97,7 +97,7 @@ export default function Services() {
                 <h3 className="font-serif text-2xl text-warm-white transition-colors duration-500 group-hover:text-accent-light md:text-3xl">
                   {service.title}
                 </h3>
-                <p className="mt-3 max-w-xl text-sm font-light leading-6 text-warm-white/58 transition-colors duration-500 group-hover:text-warm-white/76 md:text-base md:leading-7">
+                <p className="mt-3 max-w-xl text-sm font-light leading-6 text-warm-white/78 transition-colors duration-500 group-hover:text-warm-white/90 md:text-base md:leading-7">
                   {service.description}
                 </p>
               </div>

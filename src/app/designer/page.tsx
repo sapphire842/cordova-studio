@@ -81,22 +81,22 @@ export default function DesignerPage() {
           <div className="max-w-2xl">
             <p className="eyebrow text-accent-light">The material library</p>
             <h2 className="mt-5 font-serif text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-[-0.055em]">A working palette.</h2>
-            <p className="mt-7 max-w-xl text-base font-light leading-7 text-warm-white/65">A considered reference of natural, tactile materials and the furniture, lighting, and home sources Omar returns to when a project calls for something particular.</p>
+            <p className="mt-7 max-w-xl text-base font-light leading-7 text-warm-white/78">A considered reference of natural, tactile materials and the furniture, lighting, and home sources Omar returns to when a project calls for something particular.</p>
           </div>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {materialLibrary.map((material, index) => (
               <article key={`${material.category}-${index}`} className="group min-h-56 border border-warm-white/18 bg-warm-white/[0.035] p-6 transition-colors hover:border-accent-light/60 hover:bg-warm-white/[0.07]">
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-serif text-4xl text-accent-light/80">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-warm-white/48">{material.category}</span>
+                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-warm-white/72">{material.category}</span>
                 </div>
                 <h3 className="mt-12 font-serif text-2xl text-warm-white">{material.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-warm-white/58">{material.note}</p>
+                <p className="mt-3 text-sm leading-6 text-warm-white/76">{material.note}</p>
               </article>
             ))}
           </div>
           <div className="mt-16 border-t border-warm-white/18 pt-7">
-            <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/48">Trade access</p>
+            <p className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-warm-white/72">Trade access</p>
             <p className="mt-4 max-w-4xl font-serif text-xl leading-8 text-warm-white/78">CB2 · Crate &amp; Barrel · Williams Sonoma Home · Pottery Barn · West Elm · Arhaus · RH · BenchMade Modern · Living Spaces · Lulu &amp; Georgia · Lamps Plus · Rejuvenation</p>
           </div>
         </div>
