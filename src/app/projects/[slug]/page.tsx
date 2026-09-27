@@ -67,6 +67,9 @@ export default async function ProjectPage({
     idx >= 0 && idx < portfolioProjects.length - 1
       ? portfolioProjects[idx + 1]
       : null;
+  const parentProject = project.parentSlug
+    ? getProject(project.parentSlug)
+    : null;
   const childProjects = getChildProjects(project.slug);
 
   return (
@@ -172,37 +175,48 @@ export default async function ProjectPage({
 
       {/* Project navigation */}
       <section className="border-t border-charcoal/10 bg-warm-white py-12">
-        <div className="section-shell flex items-center justify-between">
-          {prev ? (
+        <div className="section-shell flex flex-col gap-8">
+          {parentProject && (
             <Link
-              href={`/projects/${prev.slug}`}
-              className="group text-left"
+              href={`/projects/${parentProject.slug}`}
+              className="group inline-flex w-fit items-center gap-3 border-b border-accent/60 pb-3 text-xs font-medium uppercase tracking-[0.18em] text-studio-green transition-colors hover:border-studio-green hover:text-accent"
             >
-              <p className="text-[10px] uppercase tracking-widest text-muted">
-                ← Previous
-              </p>
-              <p className="mt-1 font-serif text-lg text-charcoal transition-colors group-hover:text-accent">
-                {prev.title}
-              </p>
+              <span aria-hidden="true">←</span>
+              Back to {parentProject.title}
             </Link>
-          ) : (
-            <div />
           )}
-          {next ? (
-            <Link
-              href={`/projects/${next.slug}`}
-              className="group text-right"
-            >
-              <p className="text-[10px] uppercase tracking-widest text-muted">
-                Next →
-              </p>
-              <p className="mt-1 font-serif text-lg text-charcoal transition-colors group-hover:text-accent">
-                {next.title}
-              </p>
-            </Link>
-          ) : (
-            <div />
-          )}
+          <div className="flex items-center justify-between">
+            {prev ? (
+              <Link
+                href={`/projects/${prev.slug}`}
+                className="group text-left"
+              >
+                <p className="text-[10px] uppercase tracking-widest text-muted">
+                  ← Previous
+                </p>
+                <p className="mt-1 font-serif text-lg text-charcoal transition-colors group-hover:text-accent">
+                  {prev.title}
+                </p>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {next ? (
+              <Link
+                href={`/projects/${next.slug}`}
+                className="group text-right"
+              >
+                <p className="text-[10px] uppercase tracking-widest text-muted">
+                  Next →
+                </p>
+                <p className="mt-1 font-serif text-lg text-charcoal transition-colors group-hover:text-accent">
+                  {next.title}
+                </p>
+              </Link>
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
       </section>
     </>
