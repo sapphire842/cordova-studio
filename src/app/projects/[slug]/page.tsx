@@ -113,7 +113,7 @@ export default async function ProjectPage({
 
       {/* Content */}
       <section className="bg-warm-white py-20 lg:py-28">
-        <div className="mx-auto max-w-4xl px-6 lg:px-12">
+        <div className="section-shell">
           {/* Overview */}
           <p className="mb-16 font-serif text-xl leading-relaxed text-charcoal/80 md:text-2xl">
             {project.description}
