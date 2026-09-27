@@ -47,7 +47,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 pt-7 text-xs text-warm-white/42 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} The Córdova Studio™. All rights reserved.</p>
-          <p>Walnut Creek · San Francisco Bay Area</p>
+          <p>Designed with Love in San Francisco</p>
         </div>
       </div>
     </footer>
