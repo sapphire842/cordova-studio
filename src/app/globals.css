@@ -71,8 +71,8 @@ textarea {
   top: -0.2em;
   width: 2.4em;
   height: 0.72em;
-  border-left: 1px solid currentColor;
-  border-top: 1px solid currentColor;
+  border-left: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-accent);
   opacity: 0.62;
 }
 
@@ -92,12 +92,16 @@ textarea {
   top: -0.35rem;
   width: 2.2rem;
   height: 0.72rem;
-  border-left: 1px solid currentColor;
-  border-top: 1px solid currentColor;
+  border-left: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-accent);
   opacity: 0.62;
 }
 
 .content-heading--plain::before {
+  display: none;
+}
+
+.eyebrow--plain::before {
   display: none;
 }
 

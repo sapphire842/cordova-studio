@@ -21,7 +21,7 @@ export default function StyleGuidePage() {
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">01 · Type hierarchy</p>
           <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div>
-              <h2 className="eyebrow text-studio-green">Editorial scale</h2>
+              <h2 className="eyebrow eyebrow--plain text-studio-green">Editorial scale</h2>
               <p className="mt-8 max-w-xl text-base font-light leading-8 text-charcoal/70 md:text-lg md:leading-9">Headings are expressive and spacious. Supporting copy stays calm, readable, and never smaller than the heading it explains.</p>
             </div>
             <div className="space-y-6 border-l border-charcoal/15 pl-6 md:pl-8">
