@@ -103,7 +103,7 @@ const rawProjects: Project[] = [
     description:
       "This Pleasanton office transformation brings a workspace into the Renovations & Transformations collection with a focus on comfort, clarity, and everyday functionality. The project presents a refined office environment shaped through thoughtful styling, balanced composition, and details that help the room feel both professional and inviting.",
     concept:
-      "A workplace transformation shaped around focus, comfort, professionalism, and the kind of visual warmth that helps an office feel considered rather than purely utilitarian.",
+      "A former bedroom reimagined as a warm, professional workspace, with the existing closet converted into a fully custom storage wall and the room given a stronger architectural point of view. Slatted walnut detailing brings rhythm and depth to the backdrop, while generous work surfaces and personal objects keep the office focused, functional, and unmistakably lived in.",
     approach:
       "Warm walnut cabinetry gives the room a calm architectural anchor while creating generous storage for equipment, books, and the objects that make the workspace personal. Two distinct workstations support different kinds of focus, and the slatted wood wall adds depth without making the room feel closed in. Shelves, collected objects, playful textiles, and a few unexpected details keep the office connected to the life happening around the work.",
     coverImage: "/images/projects/pleasanton-office-remodel/cover.jpg",
