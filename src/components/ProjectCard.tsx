@@ -82,7 +82,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-start">
           <div>
             <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-accent">
-              {project.number} / {project.category}
+              {project.category}
             </p>
             <h3 className="mt-2 font-serif text-2xl tracking-[-0.02em] text-charcoal transition-colors group-hover:text-studio-green md:text-3xl">
               {project.title}

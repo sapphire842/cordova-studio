@@ -100,13 +100,6 @@ export default async function ProjectPage({
             </p>
           </div>
           <div className="flex items-end gap-6">
-            <span
-              className={`font-serif text-7xl font-light md:text-9xl ${
-                hasCoverImage ? "text-warm-white/20" : "text-charcoal/10"
-              }`}
-            >
-              {project.number}
-            </span>
             <h1
               className={`font-serif text-4xl leading-tight md:text-6xl ${
                 hasCoverImage ? "text-warm-white" : "text-charcoal"
