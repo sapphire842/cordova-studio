@@ -97,6 +97,10 @@ textarea {
   opacity: 0.62;
 }
 
+.content-heading--plain::before {
+  display: none;
+}
+
 .services-texture {
   background-color: var(--color-studio-green);
   background-image:

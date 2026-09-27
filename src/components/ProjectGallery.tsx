@@ -86,7 +86,7 @@ export default function ProjectGallery({
                 />
               </button>
               {captions?.[i] && (
-                <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.25em] text-accent">
+                <p className="mt-3 text-xs font-medium uppercase leading-none tracking-[0.18em] text-accent">
                   {captions[i]}
                 </p>
               )}

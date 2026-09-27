@@ -122,13 +122,13 @@ export default async function ProjectPage({
           <div className="mb-20 overflow-hidden border-y border-charcoal/15 bg-[#e4dbcf]">
             <div className="grid lg:grid-cols-2">
               <section className="border-b border-charcoal/15 p-8 md:p-12 lg:border-b-0 lg:border-r lg:p-16">
-                <h2 className="content-heading text-accent">Concept</h2>
+                <h2 className="content-heading content-heading--plain text-accent">Concept</h2>
                 <p className="mt-12 max-w-xl font-serif text-2xl leading-[1.18] tracking-[-0.025em] text-charcoal/82 md:text-3xl">{project.concept}</p>
                 <p className="mt-10 max-w-md text-sm font-light leading-7 text-charcoal/58">The first move is to understand what the existing space can become.</p>
               </section>
               <section className="bg-studio-green p-8 text-warm-white md:p-12 lg:p-16">
-                <h2 className="content-heading text-accent-light">Design Approach</h2>
-                <p className="mt-12 max-w-xl text-base font-light leading-8 text-warm-white/78 md:text-lg md:leading-9">{project.approach}</p>
+                <h2 className="content-heading content-heading--plain text-accent-light">Design Approach</h2>
+                <p className="mt-12 max-w-xl font-serif text-2xl leading-[1.18] tracking-[-0.025em] text-warm-white/82 md:text-3xl">{project.approach}</p>
                 <p className="mt-10 border-t border-warm-white/18 pt-5 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-warm-white/48">Material · proportion · use</p>
               </section>
             </div>
