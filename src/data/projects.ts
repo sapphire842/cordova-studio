@@ -105,7 +105,7 @@ const rawProjects: Project[] = [
     concept:
       "A workplace transformation shaped around focus, comfort, professionalism, and the kind of visual warmth that helps an office feel considered rather than purely utilitarian.",
     approach:
-      "The presentation keeps the same quiet editorial rhythm as the kitchen remodel, using the cover image as the visual anchor and a simple gallery sequence to show the room's materials, styling, and overall atmosphere.",
+      "Warm walnut cabinetry gives the room a calm architectural anchor while creating generous storage for equipment, books, and the objects that make the workspace personal. Two distinct workstations support different kinds of focus, and the slatted wood wall adds depth without making the room feel closed in. Shelves, collected objects, playful textiles, and a few unexpected details keep the office connected to the life happening around the work.",
     coverImage: "/images/projects/pleasanton-office-remodel/cover.jpg",
     images: [
       "/images/projects/pleasanton-office-remodel/cover.jpg",
