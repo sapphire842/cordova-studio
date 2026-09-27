@@ -14,7 +14,7 @@ export const services: Service[] = [
   {
     title: "Space Planning & Layout",
     description:
-      "Optimized floor plans and spatial arrangements that maximize flow, function, and the feeling of a room — including professional CAD renderings.",
+      "Optimized floor plans and spatial arrangements that maximize flow, function, and the feeling of a room — can include professional CAD renderings.",
     icon: "planning",
   },
   {
