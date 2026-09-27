@@ -105,13 +105,12 @@ export default function Navigation() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className={`flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border transition-colors duration-500 md:hidden ${isSolid ? "border-charcoal/15 text-charcoal" : "border-warm-white/45 text-warm-white"}`}
+          className={`relative flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-500 md:hidden ${isSolid ? "border-charcoal/15 text-charcoal" : "border-warm-white/45 text-warm-white"}`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
-          <span className={`block h-px w-5 bg-current transition-transform ${menuOpen ? "translate-y-[3.5px] rotate-45" : ""}`} />
-          <span className={`block h-px w-5 bg-current transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-px w-5 bg-current transition-transform ${menuOpen ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
+          <span className={`absolute left-1/2 top-1/2 block h-px w-5 -translate-x-1/2 -translate-y-1/2 bg-current transition-transform duration-300 ${menuOpen ? "rotate-45" : "-translate-y-[4px]"}`} />
+          <span className={`absolute left-1/2 top-1/2 block h-px w-5 -translate-x-1/2 -translate-y-1/2 bg-current transition-transform duration-300 ${menuOpen ? "-rotate-45" : "translate-y-[4px]"}`} />
         </button>
       </nav>
 
