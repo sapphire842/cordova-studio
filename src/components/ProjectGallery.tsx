@@ -80,7 +80,7 @@ export default function ProjectGallery({
               >
                 <img
                   src={img}
-                  alt={`${title} — Image ${i + 1}`}
+                  alt={`${title}, image ${i + 1}`}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />

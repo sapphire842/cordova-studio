@@ -8,13 +8,13 @@ export const services: Service[] = [
   {
     title: "Design Consultation",
     description:
-      "One-on-one sessions to understand your vision, assess your space, and develop a clear design direction — offered hourly for focused guidance.",
+      "One-on-one sessions help clarify your vision, assess your space, and develop a clear design direction. Sessions are offered hourly for focused guidance.",
     icon: "consultation",
   },
   {
     title: "Space Planning & Layout",
     description:
-      "Optimized floor plans and spatial arrangements that maximize flow, function, and the feeling of a room — can include professional CAD renderings.",
+      "Optimized floor plans and spatial arrangements maximize flow, function, and the feeling of a room. The service can include professional CAD renderings.",
     icon: "planning",
   },
   {
@@ -26,7 +26,7 @@ export const services: Service[] = [
   {
     title: "Furniture Selection",
     description:
-      "Hand-picked furnishings that balance comfort, proportion, and style — sourced from trusted manufacturers and artisan studios.",
+      "Hand-picked furnishings balance comfort, proportion, and style. Pieces are sourced from trusted manufacturers and artisan studios.",
     icon: "furniture",
   },
 ];

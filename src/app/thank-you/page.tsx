@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Thank You — The Córdova Studio",
+  title: "Thank You | The Córdova Studio",
   description: "Thank you for contacting The Córdova Studio.",
   alternates: {
     canonical: `${siteUrl}/thank-you/`,

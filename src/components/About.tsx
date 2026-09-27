@@ -48,7 +48,7 @@ export default function About() {
                 character.
               </p>
               <p>
-                His aesthetic is warm, refined, and inviting—grounded in natural
+                His aesthetic is warm, refined, and inviting. It is grounded in natural
                 woods, stone, tactile textiles, and moments of contrast. Every
                 project begins with how a space will actually be lived in,
                 resulting in interiors that feel intentional without feeling

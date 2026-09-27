@@ -6,7 +6,7 @@ import { githubPagesOrigin, siteUrl, withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${githubPagesOrigin}/`),
-  title: "The Córdova Studio — Interior Architecture & Design",
+  title: "The Córdova Studio | Interior Architecture & Design",
   description:
     "Interior architecture and design for expressive, livable homes across the San Francisco Bay Area.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Omar Córdova García",
   ],
   openGraph: {
-    title: "The Córdova Studio — Interior Architecture & Design",
+    title: "The Córdova Studio | Interior Architecture & Design",
     description:
       "Interior architecture and design for expressive, livable homes.",
     url: siteUrl,

@@ -48,7 +48,7 @@ export default function DesignerPage() {
         <div className="max-w-2xl space-y-6 text-base font-light leading-8 text-charcoal/72 md:text-lg md:leading-9">
           <p>Omar Córdova is an interior architectural designer whose work is rooted in the belief that beautiful spaces should feel as good as they look. His approach combines thoughtful space planning, architectural awareness, and a strong appreciation for materials, furniture, and the details that give a space its character.</p>
           <p>His aesthetic is warm, refined, and inviting, balancing clean, timeless forms with natural materials, organic textures, and moments of contrast. Omar draws from mid-century modern, Scandinavian, California modern, transitional, and organic contemporary interiors, allowing each project to develop an identity that feels authentic to the people who inhabit it.</p>
-          <p>Functionality is central to his process. He considers circulation, sightlines, seating, scale, durability, and the relationship between furniture and architecture to create interiors that feel intentional without feeling overly designed—spaces that are comfortable, approachable, and capable of evolving.</p>
+          <p>Functionality is central to his process. He considers circulation, sightlines, seating, scale, durability, and the relationship between furniture and architecture. His interiors feel intentional without feeling overly designed. They are comfortable, approachable, and capable of evolving.</p>
         </div>
       </section>
 
