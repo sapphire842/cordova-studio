@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: withBasePath("/images/hero-bg.jpg"),
+        url: withBasePath("/images/projects/space planning/cover.jpg"),
         width: 1200,
         height: 630,
-        alt: "The Córdova Studio interior architecture and design",
+        alt: "Warm California interior by The Córdova Studio",
       },
     ],
   },
