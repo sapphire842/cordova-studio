@@ -69,6 +69,11 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"3ee8da68d9ee499287007b8faece047c"}'
+        />
       </head>
       <body className="antialiased">
         <Navigation />
