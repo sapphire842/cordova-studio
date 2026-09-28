@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { githubPagesBasePath, siteUrl } from "@/lib/site";
+import { basePath, siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: `${githubPagesBasePath}/`,
+      allow: `${basePath || "/"}`,
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   };

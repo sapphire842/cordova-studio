@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { githubPagesOrigin, siteUrl, withBasePath } from "@/lib/site";
+import { siteUrl, withBasePath } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${githubPagesOrigin}/`),
+  metadataBase: new URL(`${siteUrl}/`),
   title: "The Córdova Studio | Interior Architecture & Design",
   description:
     "Interior architecture and design for expressive, livable homes across the San Francisco Bay Area.",
