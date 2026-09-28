@@ -1,5 +1,9 @@
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGitHubPages ? "/cordova-studio-redesign" : "";
+// The redesign preview is hosted at a repository subpath, while the
+// production repository is served from the custom-domain root. GitHub Actions
+// exposes the repository name so one build configuration can support both.
+const isProductionRepository = process.env.GITHUB_REPOSITORY === "sapphire842/cordova-studio";
+const basePath = isGitHubPages && !isProductionRepository ? "/cordova-studio-redesign" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
