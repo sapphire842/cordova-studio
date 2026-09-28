@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 import { siteUrl } from "@/lib/site";
 
-const siteUpdatedAt = "2026-04-30";
+const siteUpdatedAt = "2026-09-27";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
