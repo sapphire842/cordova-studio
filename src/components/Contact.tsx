@@ -8,7 +8,6 @@ import type {
 } from "react";
 import { useState } from "react";
 import { useReveal } from "@/lib/utils";
-import { siteUrl } from "@/lib/site";
 
 const contactEmail = "omar@thecordovastudio.com";
 const formSubmitUrl = `https://formsubmit.co/${contactEmail}`;
@@ -247,9 +246,9 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="_next"
-                value={`${siteUrl}/thank-you/`}
+                value="https://thecordovastudio.com/thank-you"
               />
-              <input type="hidden" name="_url" value={`${siteUrl}/`} />
+              <input type="hidden" name="_url" value="https://thecordovastudio.com/" />
               <input type="hidden" name="_template" value="table" />
               {sendCopy ? (
                 <input type="hidden" name="_cc" value={customerEmail} />
