@@ -10,11 +10,12 @@ import { useState } from "react";
 import { useReveal } from "@/lib/utils";
 
 const contactEmail = "omar@thecordovastudio.com";
-const formSubmitUrl = `https://formsubmit.co/${contactEmail}`;
+const formSubmitAjaxUrl = `https://formsubmit.co/ajax/${contactEmail}`;
 const requiredMessage = "Please enter your response.";
 const maxTotalUploadSize = 10 * 1024 * 1024;
 const fileLimitMessage = "Please upload up to five files totaling 10 MB or less.";
 const maxAttachmentCount = 5;
+const submitTimeoutMs = 25000;
 const fieldClassName =
   "w-full border-0 border-b border-charcoal/24 bg-transparent px-0 py-3 text-base text-charcoal outline-none transition-all duration-300 placeholder:text-muted/70 hover:border-accent focus:border-studio-green focus:px-2";
 const fileFieldClassName =
@@ -68,12 +69,50 @@ function formatPhoneNumber(value: string) {
   return parts.join(".");
 }
 
+function buildMailtoUrl(form: HTMLFormElement) {
+  const formData = new FormData(form);
+  const subject = "Project inquiry from The Cordova Studio website";
+  const fields = [
+    ["Name", formData.get("name")],
+    ["Email", formData.get("email")],
+    ["Phone", formData.get("phone")],
+    ["Project location", formData.get("project_location")],
+    ["Service interested in", formData.get("service_interested_in")],
+    ["Timeline", formData.get("timeline")],
+    ["Estimated budget", formData.get("estimated_budget")],
+    ["Message", formData.get("message")],
+  ];
+  const attachmentNames = Array.from(formData.entries())
+    .filter(
+      ([name, value]) =>
+        name.startsWith("attachment_") && value instanceof File && value.name
+    )
+    .map(([, value]) => (value as File).name);
+  const body = fields
+    .filter(([, value]) => typeof value === "string" && value.trim())
+    .map(([label, value]) => `${label}: ${value}`)
+    .concat(
+      attachmentNames.length
+        ? [`Attachments selected: ${attachmentNames.join(", ")}`]
+        : []
+    )
+    .join("\n\n");
+
+  return `mailto:${contactEmail}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+}
+
 export default function Contact() {
   const ref = useReveal();
   const [customerEmail, setCustomerEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [sendCopy, setSendCopy] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [fallbackEmailUrl, setFallbackEmailUrl] = useState(
+    `mailto:${contactEmail}`
+  );
   const [visibleAttachmentFields, setVisibleAttachmentFields] = useState([1]);
   const [selectedAttachments, setSelectedAttachments] = useState<
     Record<number, { name: string; size: number }>
@@ -161,17 +200,49 @@ export default function Contact() {
     setPhoneNumber(formatPhoneNumber(event.currentTarget.value));
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
     const { isValid, uploadInputs } = validateUploads(form);
 
     if (!isValid) {
-      event.preventDefault();
       uploadInputs.find((input) => input.files?.[0])?.reportValidity();
       return;
     }
 
+    setSubmitError("");
+    setFallbackEmailUrl(buildMailtoUrl(form));
     setIsSubmitting(true);
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(
+      () => controller.abort(),
+      submitTimeoutMs
+    );
+
+    try {
+      const response = await fetch(formSubmitAjaxUrl, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+        signal: controller.signal,
+      });
+
+      if (!response.ok) {
+        throw new Error(`FormSubmit returned ${response.status}`);
+      }
+
+      window.location.href = "/thank-you/";
+    } catch {
+      setSubmitError(
+        "The form service is taking too long to respond. Please email the inquiry directly, or try the form again in a few minutes."
+      );
+      setIsSubmitting(false);
+    } finally {
+      window.clearTimeout(timeoutId);
+    }
   };
 
   return (
@@ -223,9 +294,9 @@ export default function Contact() {
 
           <div className="relative">
             <form
-              action={formSubmitUrl}
+              action={`mailto:${contactEmail}`}
               method="POST"
-              encType="multipart/form-data"
+              encType="text/plain"
               className="relative space-y-7 overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-warm-white p-6 shadow-[0_30px_90px_rgba(16,40,36,0.11)] md:p-10"
               onSubmit={handleSubmit}
             >
@@ -495,6 +566,20 @@ export default function Contact() {
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
+              {submitError ? (
+                <p
+                  className="text-sm font-light leading-relaxed text-red-800"
+                  role="alert"
+                >
+                  {submitError}{" "}
+                  <a
+                    href={fallbackEmailUrl}
+                    className="font-medium underline decoration-red-800/40 underline-offset-4 transition-colors hover:text-charcoal"
+                  >
+                    Email Omar
+                  </a>
+                </p>
+              ) : null}
             </form>
           </div>
         </div>
