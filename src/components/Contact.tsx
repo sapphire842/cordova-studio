@@ -249,6 +249,7 @@ export default function Contact() {
                 name="_next"
                 value={`${siteUrl}/thank-you/`}
               />
+              <input type="hidden" name="_url" value={`${siteUrl}/`} />
               <input type="hidden" name="_template" value="table" />
               {sendCopy ? (
                 <input type="hidden" name="_cc" value={customerEmail} />
