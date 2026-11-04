@@ -226,6 +226,11 @@ export default function Contact() {
               action={basinFormUrl}
               method="POST"
               encType="multipart/form-data"
+              data-basin-form
+              data-basin-success-id="contact-form-success"
+              data-basin-error-id="contact-form-error"
+              data-basin-success-action="render"
+              data-basin-spam-protection="none"
               className="relative space-y-7 overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-warm-white p-6 shadow-[0_30px_90px_rgba(16,40,36,0.11)] md:p-10"
               onSubmit={handleSubmit}
             >
@@ -499,6 +504,36 @@ export default function Contact() {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
+            <div
+              id="contact-form-success"
+              className="rounded-[1.25rem] border border-accent/35 bg-warm-white p-8 shadow-[0_30px_90px_rgba(16,40,36,0.11)] md:p-10"
+              style={{ display: "none" }}
+              role="status"
+              aria-live="polite"
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent">
+                Message received
+              </p>
+              <h3 className="mt-5 font-serif text-4xl leading-tight tracking-[-0.03em] text-charcoal">
+                Thank you for reaching out.
+              </h3>
+              <p className="mt-4 max-w-lg text-base leading-7 text-charcoal/70">
+                Omar will review your note and be in touch soon.
+              </p>
+            </div>
+            <div
+              id="contact-form-error"
+              className="rounded-[1.25rem] border border-red-700/30 bg-red-50/70 p-8 text-red-900 md:p-10"
+              style={{ display: "none" }}
+              role="alert"
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.3em]">
+                We couldn&apos;t send your message
+              </p>
+              <p className="mt-4 text-base leading-7">
+                Please try again, or email Omar directly at {contactEmail}.
+              </p>
+            </div>
           </div>
         </div>
       </div>

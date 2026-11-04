@@ -74,6 +74,10 @@ export default function RootLayout({
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token":"3ee8da68d9ee499287007b8faece047c"}'
         />
+        <script
+          defer
+          src="https://js.usebasin.com/v2.11.1.min.js"
+        />
       </head>
       <body className="antialiased">
         <Navigation />
