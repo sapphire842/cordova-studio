@@ -520,6 +520,13 @@ export default function Contact() {
               <p className="mt-4 max-w-lg text-base leading-7 text-charcoal/70">
                 Omar will review your note and be in touch soon.
               </p>
+              <button
+                type="button"
+                onClick={() => window.location.reload()}
+                className="mt-8 rounded-full border border-studio-green px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-studio-green transition-colors hover:bg-studio-green hover:text-warm-white"
+              >
+                Send another inquiry
+              </button>
             </div>
             <div
               id="contact-form-error"
