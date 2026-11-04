@@ -16,7 +16,7 @@ const maxTotalUploadSize = 10 * 1024 * 1024;
 const fileLimitMessage = "Please upload up to five files totaling 10 MB or less.";
 const maxAttachmentCount = 5;
 const fieldClassName =
-  "w-full border-0 border-b border-charcoal/24 bg-transparent px-0 py-3 text-base text-charcoal outline-none transition-all duration-300 placeholder:text-muted/70 hover:border-accent focus:border-studio-green focus:px-2";
+  "w-full border-0 border-b border-charcoal/24 bg-transparent px-0 py-3 text-base text-charcoal outline-none transition-all duration-300 placeholder:text-muted/70 hover:border-accent focus:border-studio-green focus:px-2 invalid:border-red-700 invalid:bg-red-50/35 invalid:px-2";
 const fileFieldClassName =
   "w-full cursor-pointer border-0 border-b border-charcoal/24 bg-transparent px-0 py-3 text-sm text-charcoal transition-all duration-300 file:mr-5 file:rounded-full file:border-0 file:bg-studio-green file:px-5 file:py-2.5 file:text-[0.65rem] file:uppercase file:tracking-[0.18em] file:text-warm-white file:transition-colors hover:border-accent hover:file:bg-charcoal focus:border-studio-green focus:outline-none";
 
@@ -237,6 +237,9 @@ export default function Contact() {
                 <p className="mt-3 font-serif text-3xl leading-tight tracking-[-0.02em] text-charcoal">
                   Tell us what you&apos;re imagining.
                 </p>
+                <p className="mt-3 text-xs leading-relaxed text-muted">
+                  Fields marked <span aria-hidden="true" className="text-red-700">*</span> are required.
+                </p>
               </div>
               <input
                 type="hidden"
@@ -265,7 +268,7 @@ export default function Contact() {
                     htmlFor="name"
                     className="mb-2 block text-xs uppercase tracking-widest text-muted"
                   >
-                    Name
+                    Name <span aria-hidden="true" className="text-red-700">*</span>
                   </label>
                   <input
                     id="name"
@@ -282,7 +285,7 @@ export default function Contact() {
                     htmlFor="email"
                     className="mb-2 block text-xs uppercase tracking-widest text-muted"
                   >
-                    Email
+                    Email <span aria-hidden="true" className="text-red-700">*</span>
                   </label>
                   <input
                     id="email"
@@ -317,7 +320,7 @@ export default function Contact() {
                     htmlFor="phone"
                     className="mb-2 block text-xs uppercase tracking-widest text-muted"
                   >
-                    Phone
+                    Phone <span aria-hidden="true" className="text-red-700">*</span>
                   </label>
                   <input
                     id="phone"
@@ -336,7 +339,7 @@ export default function Contact() {
                     htmlFor="project-location"
                     className="mb-2 block text-xs uppercase tracking-widest text-muted"
                   >
-                    Project location
+                    Project location <span aria-hidden="true" className="text-red-700">*</span>
                   </label>
                   <input
                     id="project-location"
@@ -356,7 +359,7 @@ export default function Contact() {
                     htmlFor="service"
                     className="mb-2 block text-xs uppercase tracking-widest text-muted"
                   >
-                    Service interested in
+                    Service interested in <span aria-hidden="true" className="text-red-700">*</span>
                   </label>
                   <select
                     id="service"
@@ -412,7 +415,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="mb-2 block text-xs uppercase tracking-widest text-muted"
                 >
-                  Tell us about your project
+                    Tell us about your project <span aria-hidden="true" className="text-red-700">*</span>
                 </label>
                 <textarea
                   id="message"
