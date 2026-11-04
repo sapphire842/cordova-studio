@@ -161,7 +161,8 @@ export default function Contact() {
     setPhoneNumber(formatPhoneNumber(event.currentTarget.value));
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
     const { isValid, uploadInputs } = validateUploads(form);
 
@@ -172,6 +173,37 @@ export default function Contact() {
     }
 
     setIsSubmitting(true);
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+        signal: controller.signal,
+      });
+
+      if (!response.ok) {
+        throw new Error("The form service returned an error.");
+      }
+
+      form.reset();
+      setCustomerEmail("");
+      setPhoneNumber("");
+      setSendCopy(false);
+      setSelectedAttachments({});
+      setVisibleAttachmentFields([1]);
+      form.style.display = "none";
+      document.getElementById("contact-form-success")?.style.removeProperty("display");
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      document.getElementById("contact-form-error")?.style.removeProperty("display");
+    } finally {
+      window.clearTimeout(timeout);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -226,11 +258,6 @@ export default function Contact() {
               action={basinFormUrl}
               method="POST"
               encType="multipart/form-data"
-              data-basin-form
-              data-basin-success-id="contact-form-success"
-              data-basin-error-id="contact-form-error"
-              data-basin-success-action="render"
-              data-basin-spam-protection="none"
               className="relative space-y-7 overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-warm-white p-6 shadow-[0_30px_90px_rgba(16,40,36,0.11)] md:p-10"
               onSubmit={handleSubmit}
             >
