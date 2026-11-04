@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useReveal } from "@/lib/utils";
 
 const contactEmail = "omar@thecordovastudio.com";
-const formSubmitUrl = `https://formsubmit.co/${contactEmail}`;
+const basinFormUrl = "https://usebasin.com/f/e3903cd8994e";
 const requiredMessage = "Please enter your response.";
 const maxTotalUploadSize = 10 * 1024 * 1024;
 const fileLimitMessage = "Please upload up to five files totaling 10 MB or less.";
@@ -223,7 +223,7 @@ export default function Contact() {
 
           <div className="relative">
             <form
-              action={formSubmitUrl}
+              action={basinFormUrl}
               method="POST"
               encType="multipart/form-data"
               className="relative space-y-7 overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-warm-white p-6 shadow-[0_30px_90px_rgba(16,40,36,0.11)] md:p-10"
